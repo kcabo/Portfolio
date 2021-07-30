@@ -6,6 +6,9 @@
   },
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
   "gitmoji.additionalEmojis": [
     {
       "emoji": "🚧",
