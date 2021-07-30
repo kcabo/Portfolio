@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <title>Test Page</title>
         <link rel='icon' href='/favicon.svg' />
       </Head>
-      <main className='p-10'>{children}</main>
+      <main className=''>{children}</main>
     </>
   );
 }
