@@ -1,0 +1,92 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "gitmoji.additionalEmojis": [
+    {
+      "emoji": "🚧",
+      "code": ":construction:",
+      "description": "Work in progress"
+    },
+    {
+      "emoji": "✨",
+      "code": ":sparkles:",
+      "description": "Introduce new features"
+    },
+    {
+      "emoji": "💄",
+      "code": ":lipstick:",
+      "description": "Add or update the UI and style files"
+    },
+    {
+      "emoji": "♻️",
+      "code": ":recycle:",
+      "description": "Refactor code"
+    },
+    {
+      "emoji": "⚡️",
+      "code": ":zap:",
+      "description": "Improve performance"
+    },
+    {
+      "emoji": "🔥",
+      "code": ":fire:",
+      "description": "Remove code or files"
+    },
+    {
+      "emoji": "🚚",
+      "code": ":truck:",
+      "description": "Move or rename resources (e.g.: files, paths, routes)"
+    },
+    {
+      "emoji": "🐛",
+      "code": ":bug:",
+      "description": "Fix a bug"
+    },
+    {
+      "emoji": "🚑",
+      "code": ":ambulance:",
+      "description": "Critical hotfix"
+    },
+    {
+      "emoji": "📝",
+      "code": ":memo:",
+      "description": "Add or update documentation"
+    },
+    {
+      "emoji": "🔧",
+      "code": ":wrench:",
+      "description": "Add or update configuration files"
+    },
+    {
+      "emoji": "🚀",
+      "code": ":rocket:",
+      "description": "Deploy stuff"
+    },
+    {
+      "emoji": "🎉",
+      "code": ":tada:",
+      "description": "Begin a project"
+    },
+    {
+      "emoji": "✅",
+      "code": ":white_check_mark:",
+      "description": "Add, update, or pass tests"
+    },
+    {
+      "emoji": "⏪",
+      "code": ":rewind:",
+      "description": "Revert changes"
+    },
+    {
+      "emoji": "🔀",
+      "code": ":twisted_rightwards_arrows:",
+      "description": "Merge branches"
+    }
+  ],
+  "gitmoji.onlyUseAdditionalEmojis": true
+}

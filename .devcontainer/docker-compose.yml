@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: '..'
+      dockerfile: .devcontainer/Dockerfile
+    image: portfolio
+    container_name: app
+    ports:
+      - '3000:3000'
+    volumes:
+      - ..:/opt/portfolio
+      - node_modules:/opt/portfolio/node_modules
+    working_dir: /opt/portfolio
+    environment:
+      TZ: Asia/Tokyo
+    tty: true
+
+volumes:
+  node_modules:
