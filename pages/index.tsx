@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { GetStaticProps } from 'next';
 import { client } from '../libs/client';
 import styles from '../styles/Home.module.css';
 
@@ -23,8 +23,8 @@ export default function Home(blog: BlogResponse) {
   );
 }
 
-export async function getStaticProps() {
-  const data: BlogResponse = await client.get({
+export const getStaticProps: GetStaticProps = async () => {
+  const data = await client.get<BlogResponse>({
     endpoint: 'works',
     contentId: '22u8obhjn_p',
   });
@@ -32,4 +32,4 @@ export async function getStaticProps() {
   return {
     props: data,
   };
-}
+};
