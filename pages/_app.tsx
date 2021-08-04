@@ -10,7 +10,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <title>Reo Kanzaki | Portfolio</title>
         <meta name='description' content='神崎伶央のポートフォリオサイト' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.svg' />
+        <link rel='icon' href='/logo.svg' />
         {/* <link rel='apple-touch-icon' href='/apple-touch-icon.png' /> */}
         {/* <meta property='og:title' content='ページのタイトル' />
         <meta property='og:description' content='ページの説明文' />
