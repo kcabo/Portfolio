@@ -1,5 +1,6 @@
 import BusinessCard from '../components/BusinessCard';
 import Activities from '../components/Activities';
+import SelectedWorks from '../components/SelectedWorks';
 
 export default function Home() {
   return (
@@ -7,16 +8,8 @@ export default function Home() {
       <BusinessCard />
       <Activities />
       <div className='md:col-span-2'>
-        <Card />
+        <SelectedWorks />
       </div>
-    </div>
-  );
-}
-
-function Card() {
-  return (
-    <div className='bg-blue-500 rounded-lg'>
-      <div>Piyo</div>
     </div>
   );
 }
