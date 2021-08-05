@@ -5,14 +5,3 @@
 body {
   @apply bg-gray-50;
 }
-
-main {
-  min-height: calc(100vh - 188px - 108px);
-  @apply container px-8 mx-auto;
-}
-
-@screen xl {
-  main {
-    @apply max-w-screen-lg;
-  }
-}
