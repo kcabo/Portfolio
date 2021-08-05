@@ -4,12 +4,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      minHeight: {
-        main: 'calc(100vh - 188px - 108px)',
-      },
-      gridTemplateColumns: {
-        home: 'minmax(300px, 400px) minmax(400px, 1fr)',
-      },
       spacing: {
         'golden-main': '61.804697%',
         'golden-rest': '38.195303%',
