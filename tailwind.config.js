@@ -7,6 +7,9 @@ module.exports = {
       minHeight: {
         main: 'calc(100vh - 188px - 108px)',
       },
+      gridTemplateColumns: {
+        home: 'minmax(300px, 400px) minmax(400px, 1fr)',
+      },
     },
   },
   variants: {
