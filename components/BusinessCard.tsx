@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function BusinessCard() {
   return (
     <div className='flex rounded-lg shadow-lg bg-[#292938] before:block before:pt-golden-main overflow-hidden'>
-      <div className='flex flex-col justify-center px-8 w-golden-main'>
+      <div className='flex flex-col justify-center pl-8 w-golden-main'>
         <div className='mb-4 text-white'>
           <p className='text-xl font-bold lg:text-2xl'>Reo Kanzaki</p>
           <p className='-mt-1 font-light opacity-50 lg:text-xl'>
@@ -17,8 +17,8 @@ export default function BusinessCard() {
             className='mb-2'
           />
           <img
-            alt='Github Days'
-            src='https://img.shields.io/badge/Since%20joined-1237%20days-blue'
+            alt='Last commit'
+            src='https://img.shields.io/badge/Last%20commit-2021--07--30-blue'
           />
         </div>
       </div>
