@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className='py-10'>
+    <header className='pt-12 pb-6 md:pb-10'>
       <div className='container mx-auto'>
         <div className='w-10 mx-auto mb-2'>
           <Link href='/'>
