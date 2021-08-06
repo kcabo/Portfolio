@@ -18,7 +18,7 @@ export default function WorkCard() {
           <h4 className='mr-2 text-xl font-medium text-gray-600'>TiM</h4>
           <Link href='/'>
             <a className='flex p-1'>
-              <ExternalLinkIcon className='w-4 text-gray-400 align-text-bottom' />
+              <ExternalLinkIcon className='w-4 h-4 text-gray-400 align-text-bottom' />
             </a>
           </Link>
         </div>
