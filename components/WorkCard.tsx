@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { ExternalLinkIcon } from '@heroicons/react/solid';
 
 export default function WorkCard() {
   return (
@@ -12,7 +14,14 @@ export default function WorkCard() {
         />
       </div>
       <div className='px-5 py-6'>
-        <div className='mb-2 text-xl font-medium text-gray-600'>TiM</div>
+        <div className='flex mb-2 align-baseline'>
+          <h4 className='mr-2 text-xl font-medium text-gray-600'>TiM</h4>
+          <Link href='/'>
+            <a className='flex p-1'>
+              <ExternalLinkIcon className='w-4 text-gray-400 align-text-bottom' />
+            </a>
+          </Link>
+        </div>
         <div className='mb-6 text-gray-500'>
           部活でタイムを管理するためのLINE
           Bot。対話形式でタイムを入力し、CSVに出力。
