@@ -8,9 +8,9 @@ type Props = {
 export default function HomeCaption({ caption, allLink }: Props) {
   return (
     <div className='flex items-baseline mb-3'>
-      <h2 className='mr-5 text-xl font-bold text-gray-600'>{caption}</h2>
+      <h2 className='mr-3 text-xl font-bold text-gray-600'>{caption}</h2>
       <Link href={allLink}>
-        <a className='text-sm font-medium text-gray-400 hover:underline'>
+        <a className='px-3 text-sm font-medium text-gray-400 hover:underline'>
           View all →
         </a>
       </Link>

@@ -6,7 +6,7 @@ export default function Activities() {
     <div className=''>
       <HomeCaption caption='Recent Activities' allLink='/logs' />
       {/* トラックの高さ一杯にカードを広げる。見出しの高さを抜く */}
-      <div className='md:h-[184px] lg:h-[207.21px] p-5 bg-white rounded-lg shadow-lg overflow-y-auto'>
+      <div className='md:h-[184px] lg:h-[207.21px] px-5 py-3 bg-white rounded-lg shadow-lg overflow-y-auto'>
         <Log />
         <Log />
       </div>
@@ -16,7 +16,7 @@ export default function Activities() {
 
 function Log() {
   return (
-    <div className='mb-4'>
+    <div className='py-2'>
       <div className='flex mb-1'>
         <Zenn color='#3EA8FF' size={18} />
         {/* <img src='/logo.svg' alt='' width={18} /> */}
