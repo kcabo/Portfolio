@@ -1,14 +1,52 @@
 import styles from '../../../styles/Work.module.css';
+import Tag from '../../../components/Tag';
+import { OpenGithub, OpenHomepage } from '../../../components/RichLinkButton';
+import RelatedWorks from '../../../components/RelatedWorks';
 
 export default function Work() {
   return (
-    <div className='bg-white md:rounded-lg'>
-      <article
-        dangerouslySetInnerHTML={{
-          __html: body,
-        }}
-        className={styles.article}
-      />
+    <div className='grid md:px-8 grid-cols-1 gap-10 lg:grid-cols-[1fr,300px]'>
+      <div className='pb-6 overflow-hidden bg-white md:rounded-lg'>
+        <img
+          src='https://images.microcms-assets.io/assets/10d70abe32d44216bd12a8d56159666d/e807c88013ef4d92bda5fef84dcac8d0/textonly.png'
+          alt=''
+          className='w-full'
+        />
+        <div className='relative max-w-xs px-5 py-3 -mt-8 text-3xl font-bold text-center text-white break-words bg-gray-900'>
+          TiM
+        </div>
+        <div className='px-8 mt-6 mb-10'>
+          <div className='mb-3 text-sm text-gray-500'>2019年6月～現在</div>
+          <div className='mb-4'>
+            部活でタイムを管理するためのLINE
+            Bot。対話形式でタイムを入力し、CSVに出力。
+          </div>
+          <div className='flex flex-wrap gap-3'>
+            <Tag />
+            <Tag />
+            <Tag />
+          </div>
+        </div>
+        <div className='block w-2/3 mx-auto mb-10 lg:hidden min-w-[300px] max-w-[400px]'>
+          <OpenHomepage />
+          <OpenGithub />
+        </div>
+        <article
+          dangerouslySetInnerHTML={{
+            __html: body,
+          }}
+          className={styles.article}
+        />
+      </div>
+      <div className=''>
+        <div className='hidden mb-12 lg:block'>
+          <OpenHomepage />
+          <OpenGithub />
+        </div>
+        <div className='px-6 md:p-0'>
+          <RelatedWorks />
+        </div>
+      </div>
     </div>
   );
 }

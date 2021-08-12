@@ -1,5 +1,16 @@
 .article {
-  @apply px-4 text-lg leading-loose;
+  @apply px-5 leading-loose;
+}
+
+@screen md {
+  .article {
+    @apply px-8;
+  }
+}
+@screen lg {
+  .article {
+    @apply px-10;
+  }
 }
 
 .article p,
