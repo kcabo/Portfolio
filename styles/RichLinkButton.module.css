@@ -1,0 +1,10 @@
+.github {
+  border: 1px gray solid;
+  background: white;
+}
+
+.homepage {
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  color: white;
+}
