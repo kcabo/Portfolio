@@ -6,11 +6,11 @@ import RelatedWorks from '../../../components/RelatedWorks';
 export default function Work() {
   return (
     <div className='grid md:px-8 grid-cols-1 gap-10 lg:grid-cols-[1fr,300px]'>
-      <div className='pb-6 overflow-hidden bg-white md:rounded-lg'>
+      <div className='pb-6 bg-white md:rounded-lg'>
         <img
           src='https://images.microcms-assets.io/assets/10d70abe32d44216bd12a8d56159666d/e807c88013ef4d92bda5fef84dcac8d0/textonly.png'
           alt=''
-          className='w-full'
+          className='w-full rounded-t-lg'
         />
         <div className='relative px-5 py-3 -mt-8 text-3xl font-bold text-center text-white break-words bg-gray-900 w-96'>
           Excel アニメーション
