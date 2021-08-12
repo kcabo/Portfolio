@@ -8,12 +8,12 @@ import {
 
 export default function About() {
   return (
-    <div className='p-10 bg-white rounded-lg'>
+    <div className='p-10 bg-white md:rounded-lg'>
       <div className='max-w-md mx-auto'>
         <div className='relative mx-auto mb-8 overflow-hidden rounded-full w-60 h-60'>
           <Image src='/me.webp' layout='fill' objectFit='cover' />
         </div>
-        <h1 className='mb-6 text-2xl font-bold text-center text-gray-600'>
+        <h1 className='mb-6 text-2xl font-bold tracking-wider text-center text-gray-600'>
           神崎 伶央
         </h1>
         <p className='mb-10 text-lg text-center text-gray-600'>

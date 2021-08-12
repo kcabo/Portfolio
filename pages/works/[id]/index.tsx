@@ -10,9 +10,9 @@ export default function Work() {
         <img
           src='https://images.microcms-assets.io/assets/10d70abe32d44216bd12a8d56159666d/e807c88013ef4d92bda5fef84dcac8d0/textonly.png'
           alt=''
-          className='w-full rounded-t-lg'
+          className='w-full md:rounded-t-lg'
         />
-        <div className='relative px-5 py-3 -mt-8 text-3xl font-bold text-center text-white break-words bg-gray-900 w-96'>
+        <div className='relative w-4/5 max-w-md px-5 py-4 -mt-10 text-3xl font-bold text-center text-white break-words bg-gray-900'>
           Excel アニメーション
         </div>
         <div className='px-8 mt-6 mb-10'>
@@ -27,7 +27,7 @@ export default function Work() {
             <Tag />
           </div>
         </div>
-        <div className='block w-2/3 mx-auto mb-10 lg:hidden min-w-[300px] max-w-[400px]'>
+        <div className='block w-2/3 mx-auto mb-10 lg:hidden min-w-[280px] max-w-[400px]'>
           <OpenHomepage />
           <OpenGithub />
         </div>
