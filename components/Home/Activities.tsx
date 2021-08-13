@@ -1,14 +1,14 @@
 import HomeCaption from './HomeCaption';
-import Log from '../Log';
+import { ReactElement } from 'react';
 
-export default function Activities() {
+// Logのコンポーネント群を受け取る
+// 高さをピクセルで指定してあるのはトラックの高さ一杯にカードを広げるため。
+export default function Activities({ children }: { children: ReactElement[] }) {
   return (
     <div className=''>
       <HomeCaption caption='Recent Activities' allLink='/logs' />
-      {/* トラックの高さ一杯にカードを広げる。見出しの高さを抜く */}
       <div className='md:h-[184px] lg:h-[207.21px] px-5 py-3 bg-white rounded-lg shadow-lg overflow-y-auto'>
-        <Log />
-        <Log />
+        {children}
       </div>
     </div>
   );
