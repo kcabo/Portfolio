@@ -1,5 +1,5 @@
 import HomeCaption from './HomeCaption';
-import WorkCard from './WorkCard';
+import WorkCard from '../WorkCard';
 
 export default function SelectedWorks() {
   return (

@@ -1,6 +1,6 @@
-import BusinessCard from '../components/BusinessCard';
-import Activities from '../components/Activities';
-import SelectedWorks from '../components/SelectedWorks';
+import BusinessCard from '../components/Home/BusinessCard';
+import Activities from '../components/Home/Activities';
+import SelectedWorks from '../components/Home/SelectedWorks';
 
 export default function Home() {
   return (
