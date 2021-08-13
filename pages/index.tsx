@@ -20,8 +20,9 @@ export default function Home({ updates }: { updates: Props[] }) {
       <Activities>
         {updates
           .filter((update) => update.showOnTop)
-          .map((update) => (
+          .map((update, index) => (
             <Log
+              key={index}
               logType={update.logType}
               date={update.date}
               body={update.body}
