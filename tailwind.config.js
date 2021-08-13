@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        'golden-main': '61.804697%',
-        'golden-rest': '38.195303%',
+        'golden-main': '61.8%',
+        'golden-rest': '38.3%',
       },
     },
   },
