@@ -1,4 +1,4 @@
-import { client } from '@/libs/client';
+import { client } from '@/lib/client';
 
 type LogType = 'GitHub' | 'Portfolio' | 'Zenn';
 
