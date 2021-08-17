@@ -1,4 +1,4 @@
-import WorkCard from '../../components/WorkCard';
+import WorkCard from '@/components/WorkCard';
 
 export default function Works() {
   return (
