@@ -44,7 +44,7 @@ type Work = {
   tags: string[];
   theme: Theme | null;
   body: string;
-  relatedWorks: Work[] | { id: string }[];
+  relatedWorks: WorkResponse[];
 };
 
 type CoverImage = {
@@ -77,4 +77,8 @@ export type WorkListResponse = ListContentsResponse<WorkResponse>;
 
 export type SelectedWorksResponse = ContentResponse<{
   selectedWorks: WorkResponse[];
+}>;
+
+export type IDListResponse = ListContentsResponse<{
+  id: string;
 }>;
