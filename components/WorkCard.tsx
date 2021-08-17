@@ -19,7 +19,7 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
         </a>
       </Link>
 
-      <div className='px-5 py-6'>
+      <div className='flex flex-col h-[calc(100%-192px)] px-5 py-6'>
         <div className='flex mb-2 align-baseline'>
           <Link href={`/works/${encodeURIComponent(data.id)}`}>
             <a>
@@ -38,7 +38,7 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
           )}
         </div>
         <Link href={`/works/${encodeURIComponent(data.id)}`}>
-          <a>
+          <a className='flex-grow block'>
             <div className='mb-6 text-gray-500'>{data.description}</div>
           </a>
         </Link>
