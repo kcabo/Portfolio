@@ -1,32 +1,20 @@
 import BusinessCard from '@/components/Home/BusinessCard';
 import Activities from '@/components/Home/Activities';
 import SelectedWorks from '@/components/Home/SelectedWorks';
-import Log from '@/components/Log';
+import LogItem from '@/components/Log';
+
 import fetchUpdates from '@/lib/fetchUpdates';
+import { Log } from '@/lib/types';
 
-type TLogType = 'GitHub' | 'Portfolio' | 'Zenn';
-
-type Props = {
-  showOnTop: boolean;
-  logType: TLogType;
-  date: string;
-  body: string;
-};
-
-export default function Home({ updates }: { updates: Props[] }) {
+export default function Home({ logs }: { logs: Log[] }) {
   return (
     <div className='grid px-8 grid-cols-1 gap-10 md:grid-cols-[minmax(300px,400px)minmax(300px,1fr)]'>
       <BusinessCard />
       <Activities>
-        {updates
-          .filter((update) => update.showOnTop)
-          .map((update, index) => (
-            <Log
-              key={index}
-              logType={update.logType}
-              date={update.date}
-              body={update.body}
-            />
+        {logs
+          .filter((log) => log.showOnTop)
+          .map((log, index) => (
+            <LogItem key={index} log={log} />
           ))}
       </Activities>
       <div className='md:col-span-2'>
@@ -37,9 +25,9 @@ export default function Home({ updates }: { updates: Props[] }) {
 }
 
 export async function getStaticProps() {
-  const updates = await fetchUpdates();
+  const logs = await fetchUpdates();
 
   return {
-    props: { updates },
+    props: { logs },
   };
 }

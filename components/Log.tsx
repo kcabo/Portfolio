@@ -2,36 +2,30 @@ import { Github, Zenn } from '@icons-pack/react-simple-icons';
 import Logo from '../public/logo.svg';
 import styles from '@/styles/Log.module.css';
 
-type TLogType = 'GitHub' | 'Portfolio' | 'Zenn';
+import { Log, LogCategory } from '@/lib/types';
 
-type Props = {
-  logType: TLogType;
-  date: string;
-  body: string;
-};
-
-export default function Log({ logType, date, body }: Props) {
+export default function LogItem({ log }: { log: Log }) {
   return (
     <div className='py-1.5'>
       <div className='flex items-center mb-1'>
-        <Icon logType={logType} />
+        <Icon category={log.category} />
         <div className='mx-2 font-medium leading-5 text-gray-600'>
-          {logType}
+          {log.category}
         </div>
-        <div className='text-sm text-gray-400'>{date}</div>
+        <div className='text-sm text-gray-400'>{log.date}</div>
       </div>
       <div
         className={'text-sm text-gray-600 lg:text-base ' + styles.content}
         dangerouslySetInnerHTML={{
-          __html: body,
+          __html: log.body,
         }}
       />
     </div>
   );
 }
 
-function Icon({ logType }: { logType: TLogType }) {
-  switch (logType) {
+function Icon({ category }: { category: LogCategory }) {
+  switch (category) {
     case 'GitHub':
       return <Github color='#181717' size={18} />;
     case 'Portfolio':
