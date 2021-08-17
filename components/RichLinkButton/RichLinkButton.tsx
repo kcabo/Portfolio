@@ -1,4 +1,4 @@
-import styles from '../../styles/RichLinkButton.module.css';
+import styles from '@/styles/RichLinkButton.module.css';
 
 type Props = {
   icon: React.ReactElement;

@@ -1,7 +1,7 @@
-import styles from '../../../styles/Work.module.css';
-import Tag from '../../../components/Tag';
-import { OpenGithub, OpenHomepage } from '../../../components/RichLinkButton';
-import RelatedWorks from '../../../components/RelatedWorks';
+import styles from '@/styles/Work.module.css';
+import Tag from '@/components/Tag';
+import { OpenGithub, OpenHomepage } from '@/components/RichLinkButton';
+import RelatedWorks from '@/components/RelatedWorks';
 
 export default function Work() {
   return (

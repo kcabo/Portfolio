@@ -1,8 +1,8 @@
-import BusinessCard from '../components/Home/BusinessCard';
-import Activities from '../components/Home/Activities';
-import SelectedWorks from '../components/Home/SelectedWorks';
-import Log from '../components/Log';
-import fetchUpdates from '../libs/fetchUpdates';
+import BusinessCard from '@/components/Home/BusinessCard';
+import Activities from '@/components/Home/Activities';
+import SelectedWorks from '@/components/Home/SelectedWorks';
+import Log from '@/components/Log';
+import fetchUpdates from '@/libs/fetchUpdates';
 
 type TLogType = 'GitHub' | 'Portfolio' | 'Zenn';
 
