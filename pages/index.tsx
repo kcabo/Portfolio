@@ -4,9 +4,16 @@ import SelectedWorks from '@/components/Home/SelectedWorks';
 import LogItem from '@/components/Log';
 
 import fetchUpdates from '@/lib/fetchUpdates';
-import { Log } from '@/lib/types';
+import fetchSelectedWorks from '@/lib/fetchSelectedWorks';
+import { Log, WorkResponse } from '@/lib/types';
 
-export default function Home({ logs }: { logs: Log[] }) {
+export default function Home({
+  logs,
+  selectedWorks,
+}: {
+  logs: Log[];
+  selectedWorks: WorkResponse[];
+}) {
   return (
     <div className='grid px-8 grid-cols-1 gap-10 md:grid-cols-[minmax(300px,400px)minmax(300px,1fr)]'>
       <BusinessCard />
@@ -18,7 +25,7 @@ export default function Home({ logs }: { logs: Log[] }) {
           ))}
       </Activities>
       <div className='md:col-span-2'>
-        <SelectedWorks />
+        <SelectedWorks works={selectedWorks} />
       </div>
     </div>
   );
@@ -26,8 +33,9 @@ export default function Home({ logs }: { logs: Log[] }) {
 
 export async function getStaticProps() {
   const logs = await fetchUpdates();
+  const selectedWorks = await fetchSelectedWorks();
 
   return {
-    props: { logs },
+    props: { logs, selectedWorks },
   };
 }

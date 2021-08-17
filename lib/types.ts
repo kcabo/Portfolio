@@ -74,3 +74,7 @@ type Theme = {
 export type WorkResponse = ContentResponse<Work>;
 
 export type WorkListResponse = ListContentsResponse<WorkResponse>;
+
+export type SelectedWorksResponse = ContentResponse<{
+  selectedWorks: WorkResponse[];
+}>;
