@@ -1,14 +1,19 @@
 import HomeCaption from './HomeCaption';
-import { ReactElement } from 'react';
+import LogItem from '@/components/Log';
 
-// Logのコンポーネント群を受け取る
+import { Log } from '@/lib/types';
+
 // 高さをピクセルで指定してあるのはトラックの高さ一杯にカードを広げるため。
-export default function Activities({ children }: { children: ReactElement[] }) {
+export default function Activities({ logs }: { logs: Log[] }) {
   return (
     <div className=''>
       <HomeCaption caption='Recent Activities' allLink='/logs' />
       <div className='md:h-[184px] lg:h-[207.21px] px-5 py-3 bg-white rounded-lg shadow-lg overflow-y-auto'>
-        {children}
+        {logs
+          .filter((log) => log.showOnTop)
+          .map((log, index) => (
+            <LogItem key={index} log={log} />
+          ))}
       </div>
     </div>
   );
