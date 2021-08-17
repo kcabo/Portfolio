@@ -5,6 +5,7 @@
 }
 
 .github {
+  margin-bottom: 24px;
   border: 1px rgb(224, 224, 224) solid;
   background: white;
   color: theme('colors.gray.600');
