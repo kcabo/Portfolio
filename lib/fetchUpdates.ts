@@ -1,40 +1,26 @@
-import { client } from '@/lib/client';
-
-type LogType = 'GitHub' | 'Portfolio' | 'Zenn';
-
-type updateResponse = {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
-  showOnTop: boolean;
-  type: LogType[];
-  date: string;
-  body: string;
-};
-
-type updateListResponse = {
-  contents: updateResponse[];
-  totalCount: number;
-  offset: number;
-  limit: number;
-};
+import { client } from './client';
+import { Log, UpdateListResponse } from './types';
 
 export default async function fetchUpdates() {
-  const data = await client.get<updateListResponse>({
+  const response = await client.get<UpdateListResponse>({
     endpoint: 'updates',
     queries: { orders: '-date' },
   });
 
-  const updates = data.contents.map(({ showOnTop, type, date, body }) => {
-    return {
-      showOnTop: showOnTop,
-      logType: type[0],
-      date: date.slice(0, 10),
-      body: body,
-    };
-  });
+  const logs = formatData(response);
 
-  return updates;
+  return logs;
+}
+
+function formatData(response: UpdateListResponse): Log[] {
+  const payload = response.contents;
+
+  const logs = payload.map((item) => ({
+    showOnTop: item.showOnTop,
+    category: item.category[0], // 要素が一つでも配列形式が返されるため
+    date: item.date.slice(0, 10), // yyyy-MM-ddの部分を切り出す
+    body: item.body,
+  }));
+
+  return logs;
 }
