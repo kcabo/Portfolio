@@ -1,7 +1,12 @@
-import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
-import Layout from '@/components/Layout';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+
+import { GA_TRACKING_ID, pageview } from '@/lib/gtag';
+
+import '@/styles/globals.css';
+import Layout from '@/components/Layout';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
