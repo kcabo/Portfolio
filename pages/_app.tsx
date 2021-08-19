@@ -1,9 +1,5 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
-
-import { GA_TRACKING_ID, pageview } from '@/lib/gtag';
 
 import '@/styles/globals.css';
 import Layout from '@/components/Layout';
@@ -12,7 +8,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Head>
-        <title>Reo Kanzaki | Portfolio</title>
         <meta name='description' content='神崎伶央のポートフォリオサイト' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/logo.svg' />

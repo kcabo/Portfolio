@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import WorkCard from '@/components/WorkCard';
 import PageTitle from '@/components/PageTitle';
 
@@ -7,6 +9,9 @@ import { WorkResponse } from '@/lib/types';
 export default function Works({ works }: { works: WorkResponse[] }) {
   return (
     <div className='px-8'>
+      <Head>
+        <title>Works - Reo Kanzaki</title>
+      </Head>
       <PageTitle
         title='My Works'
         sub='これまでに開発したアプリ・ツールの一覧です。'
