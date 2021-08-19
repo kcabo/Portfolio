@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Head from 'next/head';
+
 import {
   Linkedin,
   Github,
@@ -9,6 +11,9 @@ import {
 export default function About() {
   return (
     <div className='p-10 bg-white md:rounded-lg'>
+      <Head>
+        <title>About - Reo Kanzaki</title>
+      </Head>
       <div className='max-w-md mx-auto'>
         <div className='relative mx-auto mb-8 overflow-hidden rounded-full w-60 h-60'>
           <Image

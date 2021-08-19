@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Head from 'next/head';
 
 import styles from '@/styles/Work.module.css';
 import Tag from '@/components/Tag';
@@ -12,6 +13,9 @@ import { WorkResponse } from '@/lib/types';
 export default function Work({ work }: { work: WorkResponse }) {
   return (
     <div className='grid md:px-8 grid-cols-1 gap-10 lg:grid-cols-[1fr,300px]'>
+      <Head>
+        <title>{work.title} - Reo Kanzaki</title>
+      </Head>
       <div className='pb-6 bg-white md:rounded-lg'>
         <Image
           src={work.coverImage.url}

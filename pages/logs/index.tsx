@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import LogItem from '@/components/Log';
 import PageTitle from '@/components/PageTitle';
 
@@ -7,6 +9,9 @@ import { Log } from '@/lib/types';
 export default function Page({ logs }: { logs: Log[] }) {
   return (
     <div className='px-8'>
+      <Head>
+        <title>Activity Logs - Reo Kanzaki</title>
+      </Head>
       <PageTitle
         title='Logs'
         sub='主要なGitHubリポジトリの更新・Zennへの記事投稿・ポートフォリオのページ追加の情報一覧'
