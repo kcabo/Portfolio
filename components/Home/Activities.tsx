@@ -15,6 +15,15 @@ export default function Activities({ logs }: { logs: Log[] }) {
             <LogItem key={index} log={log} />
           ))}
       </div>
+      <style jsx>{`
+        div::-webkit-scrollbar {
+          width: 6px;
+        }
+        div::-webkit-scrollbar-thumb {
+          border-radius: 5px;
+          background: #d1d5db;
+        }
+      `}</style>
     </div>
   );
 }
