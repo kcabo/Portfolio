@@ -1,7 +1,8 @@
-export default function Tag(props: { text: string }) {
+export default function Tag({ text }: { text: string }) {
   return (
-    <div className='px-4 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full'>
-      {'#' + props.text}
+    <div className='flex items-center px-2 py-1 bg-gray-100 rounded-full'>
+      <div className='bg-gray-400 rounded-full w-1.5 h-1.5 mr-1'></div>
+      <div className='text-sm text-gray-600'>{text}</div>
     </div>
   );
 }

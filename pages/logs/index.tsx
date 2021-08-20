@@ -8,7 +8,7 @@ import { Log } from '@/lib/types';
 
 export default function Page({ logs }: { logs: Log[] }) {
   return (
-    <div className='px-8'>
+    <div className='p-10 bg-white md:rounded-lg'>
       <Head>
         <title>Activity Logs - Reo Kanzaki</title>
       </Head>
