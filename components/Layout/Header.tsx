@@ -1,13 +1,14 @@
 import Link from 'next/link';
-import Image from 'next/image';
+
+import Logo from '../../public/logo.svg';
 
 export default function Header() {
   return (
     <header className='pt-12 pb-6 md:pb-10'>
       <div className='container mx-auto'>
         <Link href='/'>
-          <a className='block w-8 mx-auto mb-1'>
-            <Image src='/logo.svg' alt='kcabo logo' height={50} width={50} />
+          <a className='block w-8 mx-auto mb-2'>
+            <Logo width={32} />
           </a>
         </Link>
         <nav className='flex justify-center gap-6 mx-auto'>
