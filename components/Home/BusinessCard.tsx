@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Badges from './Badges';
 
 export default function BusinessCard() {
   return (
@@ -10,17 +11,7 @@ export default function BusinessCard() {
             web developer
           </p>
         </div>
-        <div className=''>
-          <img
-            alt='Commit Count'
-            src='https://img.shields.io/badge/Commits(2021)-112-blue'
-            className='mb-2'
-          />
-          <img
-            alt='Last commit'
-            src='https://img.shields.io/badge/Last%20commit-2021--07--30-blue'
-          />
-        </div>
+        <Badges />
       </div>
       <div className='relative w-golden-rest'>
         <Image
