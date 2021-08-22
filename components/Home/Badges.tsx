@@ -8,11 +8,11 @@ export default function Badges() {
     <div className='space-y-2'>
       <img
         alt='Commit Count'
-        src={`https://img.shields.io/endpoint?url=https%3A%2F%2F${BADGE_ENDPOINT}%2Fapi%2Fcommit_count`}
+        src={`https://img.shields.io/endpoint?url=https%3A%2F%2F${BADGE_ENDPOINT}%2Fapi%2Fcommit-count`}
       />
       <img
         alt='Last commit'
-        src={`https://img.shields.io/endpoint?url=https%3A%2F%2F${BADGE_ENDPOINT}%2Fapi%2Flast_commit`}
+        src={`https://img.shields.io/endpoint?url=https%3A%2F%2F${BADGE_ENDPOINT}%2Fapi%2Flast-commit`}
       />
     </div>
   );
