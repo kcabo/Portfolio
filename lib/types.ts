@@ -82,3 +82,10 @@ export type SelectedWorksResponse = ContentResponse<{
 export type IDListResponse = ListContentsResponse<{
   id: string;
 }>;
+
+export type BadgeJsonSchema = {
+  schemaVersion: 1;
+  label: string;
+  message: string;
+  color: string;
+};
