@@ -38,8 +38,8 @@ export default function Work({ work }: { work: WorkResponse }) {
           </div>
         </div>
         <div className='block w-2/3 mx-auto lg:hidden min-w-[280px] max-w-[400px]'>
-          <OpenHomepage url={work.links?.homepage} />
-          <OpenGithub url={work.links?.github} />
+          {work.links?.homepage && <OpenHomepage url={work.links.homepage} />}
+          {work.links?.github && <OpenGithub url={work.links.github} />}
         </div>
         <article
           dangerouslySetInnerHTML={{
@@ -50,8 +50,8 @@ export default function Work({ work }: { work: WorkResponse }) {
       </div>
       <div className=''>
         <div className='hidden lg:block'>
-          <OpenHomepage url={work.links?.homepage} />
-          <OpenGithub url={work.links?.github} />
+          {work.links?.homepage && <OpenHomepage url={work.links.homepage} />}
+          {work.links?.github && <OpenGithub url={work.links.github} />}
         </div>
         {work.relatedWorks.length > 0 && (
           <RelatedWorks works={work.relatedWorks} />
