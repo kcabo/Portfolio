@@ -13,7 +13,7 @@ export default function Header() {
         </Link>
         <nav className='flex justify-center gap-6 mx-auto'>
           <Link href='/works'>
-            <a className='p-3 text-lg font-bold text-gray-600'>Work</a>
+            <a className='p-3 text-lg font-bold text-gray-600'>Works</a>
           </Link>
           <Link href='/about'>
             <a className='p-3 text-lg font-bold text-gray-600'>About</a>
