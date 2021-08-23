@@ -9,10 +9,12 @@ export default function Badges() {
       <img
         alt='Commit Count'
         src={`https://img.shields.io/endpoint?url=https%3A%2F%2F${BADGE_ENDPOINT}%2Fapi%2Fcommit-count`}
+        height={20}
       />
       <img
         alt='Last commit'
         src={`https://img.shields.io/endpoint?url=https%3A%2F%2F${BADGE_ENDPOINT}%2Fapi%2Flast-commit`}
+        height={20}
       />
     </div>
   );

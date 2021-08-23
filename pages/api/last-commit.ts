@@ -12,6 +12,7 @@ export default async function handler(
     label: 'Last commit',
     message: lastCommitDate,
     color: '#0496FF',
+    cacheSeconds: 3600,
   };
   res.status(200).json(jsonSchema);
 }

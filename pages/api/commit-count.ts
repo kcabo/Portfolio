@@ -13,6 +13,7 @@ export default async function handler(
     label: `Commits in ${year}`,
     message: commitCount,
     color: '#0496FF',
+    cacheSeconds: 3600,
   };
   res.status(200).json(jsonSchema);
 }
