@@ -6,7 +6,7 @@ export default function Privacy() {
   return (
     <div className='p-10 bg-white md:rounded-lg'>
       <Head>
-        <title>プライバシーポリシー - Reo Kanzaki</title>
+        <title>プライバシーポリシー</title>
       </Head>
       <PageTitle
         title='プライバシーポリシー'

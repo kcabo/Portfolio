@@ -12,7 +12,7 @@ export default function About() {
   return (
     <div className='px-10 bg-white py-14 md:rounded-lg'>
       <Head>
-        <title>About - Reo Kanzaki</title>
+        <title>About</title>
       </Head>
       <div className='max-w-md mx-auto'>
         <div className='relative mx-auto mb-8 overflow-hidden rounded-full w-60 h-60'>

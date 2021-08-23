@@ -18,7 +18,7 @@ export default function Work({ work }: { work: WorkResponse }) {
   return (
     <div className='grid md:px-8 grid-cols-1 gap-10 lg:grid-cols-[1fr,300px]'>
       <Head>
-        <title>{work.title} - Reo Kanzaki</title>
+        <title>{work.title}</title>
       </Head>
       <div className='pb-6 bg-white md:rounded-lg'>
         <Image

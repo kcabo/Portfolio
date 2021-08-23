@@ -10,7 +10,7 @@ export default function Page({ logs }: { logs: Log[] }) {
   return (
     <div className='p-10 bg-white md:rounded-lg'>
       <Head>
-        <title>Activity Logs - Reo Kanzaki</title>
+        <title>Logs</title>
       </Head>
       <PageTitle
         title='Logs'
