@@ -10,7 +10,7 @@ import {
 
 export default function About() {
   return (
-    <div className='p-10 bg-white md:rounded-lg'>
+    <div className='px-10 bg-white py-14 md:rounded-lg'>
       <Head>
         <title>About - Reo Kanzaki</title>
       </Head>
@@ -28,6 +28,7 @@ export default function About() {
         </h1>
         <p className='mb-10 text-lg text-center text-gray-600'>
           Excelからプログラミングの世界に入りました。
+          <br />
           経歴はLinkedInをご参照ください。
         </p>
         <div className='flex justify-center gap-6 mb-10'>
@@ -44,22 +45,31 @@ export default function About() {
             <Linkedin size={36} color='#0A66C2' />
           </a>
         </div>
-        <div className='a'>
-          <div className='mb-10'>
+        <div className='space-y-10'>
+          <div>
             <Caption text='Skills' />
             <p>TypeScriptとPythonが好きです</p>
           </div>
-          <div className='mb-10'>
+          <div>
             <Caption text='Qualification' />
             <p>基本情報処理技術者・応用情報処理技術者・TOEIC920</p>
           </div>
-          <div className='mb-10'>
+          <div>
             <Caption text='Hobbies' />
-            <p>Swimming, skiing, going to sauna and watching Evangelion</p>
+            <p>
+              水泳・スキー・サウナ・エヴァ
+              <img
+                src='https://abs.twimg.com/hashflags/Amazon_EVANGELION_July_2021/Amazon_EVANGELION_July_2021.png'
+                alt='初号機'
+                width={20}
+                height={20}
+                className='inline-block ml-1'
+              />
+            </p>
           </div>
-          <div className='mb-10'>
+          <div>
             <Caption text='Contact' />
-            <p>Sorry, e-mail addresses are currently unavailable.</p>
+            <p>メッセージは上記のSNSからお願いします</p>
           </div>
         </div>
       </div>
