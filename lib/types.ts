@@ -88,4 +88,5 @@ export type BadgeJsonSchema = {
   label: string;
   message: string;
   color: string;
+  cacheSeconds: number;
 };
