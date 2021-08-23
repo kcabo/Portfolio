@@ -11,6 +11,10 @@ import { fetchWorksOnlyID } from '@/lib/fetchWorks';
 import { WorkResponse } from '@/lib/types';
 
 export default function Work({ work }: { work: WorkResponse }) {
+  const themeStyle = {
+    color: work.theme?.textColor || 'white',
+    background: work.theme?.backgroundColor || '#111827',
+  };
   return (
     <div className='grid md:px-8 grid-cols-1 gap-10 lg:grid-cols-[1fr,300px]'>
       <Head>
@@ -25,7 +29,10 @@ export default function Work({ work }: { work: WorkResponse }) {
           layout='responsive'
           className='md:rounded-t-lg'
         />
-        <div className='relative w-4/5 max-w-md px-5 py-4 -mt-10 text-3xl font-bold text-center text-white break-words bg-gray-900'>
+        <div
+          className='relative w-4/5 max-w-md px-5 py-4 -mt-10 text-3xl font-bold text-center break-words'
+          style={themeStyle}
+        >
           {work.title}
         </div>
         <div className='px-8 mt-6 mb-10'>

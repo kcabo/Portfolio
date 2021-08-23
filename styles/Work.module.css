@@ -26,7 +26,8 @@
 }
 
 .article h2 {
-  @apply p-3 mb-6 text-2xl font-bold text-gray-800 border-b-4 border-blue-500 bg-blue-50;
+  @apply pb-2 mb-6 text-2xl font-bold text-gray-800 border-b-2;
+  border-color: #0496ff;
 }
 
 .article h3 {
@@ -46,7 +47,7 @@
 }
 
 .article a {
-  @apply text-blue-500;
+  color: #4686da;
 }
 
 .article u {
