@@ -54,11 +54,10 @@ export async function fetchCommitCount(year: number) {
 
 export function useRepoDate(repoURL: string) {
   const url = toAPIURL(repoURL);
-  if (!url) return 'invalid url';
 
-  const { data, error } = useSWR(url, {
-    revalidateOnFocus: false,
-    dedupingInterval: 600000,
+  const { data, error } = useSWR(url, safeFetcher, {
+    revalidateOnFocus: false, // ウィンドウがフォーカスされたときに自動的に再検証しない
+    dedupingInterval: 600000, // 10分以内のリクエストを重複として排除
     errorRetryCount: 2,
   });
 
@@ -71,6 +70,13 @@ export function useRepoDate(repoURL: string) {
   } else {
     return '-';
   }
+}
+
+async function safeFetcher(url: string) {
+  if (!url) throw new Error('URL not set');
+  const res = await window.fetch(url);
+  const json = await res.json();
+  return json;
 }
 
 function toAPIURL(repoURL: string) {
