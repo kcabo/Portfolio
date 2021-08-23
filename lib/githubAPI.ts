@@ -1,5 +1,6 @@
 import { Octokit } from '@octokit/core';
 import { toDate } from '@/lib/dateUtil';
+import useSWR from 'swr';
 
 const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN || '';
 const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN });
@@ -48,5 +49,50 @@ export async function fetchCommitCount(year: number) {
   } catch (e) {
     console.error(e);
     return '-';
+  }
+}
+
+export function useRepoDate(repoURL: string) {
+  const url = toAPIURL(repoURL);
+  if (!url) return 'invalid url';
+
+  const { data, error } = useSWR(url, {
+    revalidateOnFocus: false,
+    dedupingInterval: 600000,
+    errorRetryCount: 2,
+  });
+
+  if (error) {
+    return 'error!';
+  } else if (!error && !data) {
+    return 'Loading...';
+  } else if (data?.pushed_at) {
+    return toDate(data.pushed_at);
+  } else {
+    return '-';
+  }
+}
+
+function toAPIURL(repoURL: string) {
+  const { owner, repo } = extractRepoName(repoURL);
+  if (!owner) return null;
+  return `https://api.github.com/repos/${owner}/${repo}`;
+}
+
+function extractRepoName(repoURL: string) {
+  const re = /https?:\/\/github.com\/([A-Za-z0-9_.-]*)\/([A-Za-z0-9_.-]*)/;
+  const match = repoURL.match(re);
+
+  // owner と repo情報をURLから検出できない可能性もある
+  if (!match || match.length != 3) {
+    return {
+      owner: null,
+      repo: null,
+    };
+  } else {
+    return {
+      owner: match[1],
+      repo: match[2],
+    };
   }
 }
