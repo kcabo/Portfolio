@@ -2,8 +2,7 @@ import RichLinkButton from './RichLinkButton';
 import { Github } from '@icons-pack/react-simple-icons';
 import { useRepoDate } from '@/lib/githubAPI';
 
-export function OpenGithub({ url }: { url: string | undefined }) {
-  if (!url) return <></>;
+export function OpenGithub({ url }: { url: string }) {
   const repoUpdateDate = useRepoDate(url);
 
   return (
