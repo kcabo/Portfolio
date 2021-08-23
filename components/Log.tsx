@@ -6,13 +6,13 @@ import { Log, LogCategory } from '@/lib/types';
 
 export default function LogItem({ log }: { log: Log }) {
   return (
-    <div className='py-1.5'>
-      <div className='flex items-center mb-1'>
+    <div className='py-2'>
+      <div className='flex items-end mb-1.5'>
         <Icon category={log.category} />
-        <div className='mx-2 font-medium leading-5 text-gray-600'>
+        <div className='mx-2 font-medium leading-none text-gray-600'>
           {log.category}
         </div>
-        <div className='text-sm text-gray-400'>{log.date}</div>
+        <div className='text-sm leading-none text-gray-400'>{log.date}</div>
       </div>
       <div
         className={'text-sm text-gray-600 lg:text-base ' + styles.content}
@@ -27,10 +27,10 @@ export default function LogItem({ log }: { log: Log }) {
 function Icon({ category }: { category: LogCategory }) {
   switch (category) {
     case 'GitHub':
-      return <Github color='#181717' size={18} />;
+      return <Github color='#181717' size={16} />;
     case 'Portfolio':
-      return <Logo width={16} />;
+      return <Logo width={15} />;
     case 'Zenn':
-      return <Zenn color='#3EA8FF' size={18} />;
+      return <Zenn color='#3EA8FF' size={16} />;
   }
 }
