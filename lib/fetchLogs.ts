@@ -1,9 +1,9 @@
 import { client } from './client';
-import { Log, UpdateListResponse } from './types';
+import { Log, LogListResponse } from './types';
 
-export default async function fetchUpdates() {
-  const response = await client.get<UpdateListResponse>({
-    endpoint: 'updates',
+export default async function fetchLogs() {
+  const response = await client.get<LogListResponse>({
+    endpoint: 'logs',
     queries: { orders: '-date' },
   });
 
@@ -12,7 +12,7 @@ export default async function fetchUpdates() {
   return logs;
 }
 
-function formatData(response: UpdateListResponse): Log[] {
+function formatData(response: LogListResponse): Log[] {
   const payload = response.contents;
 
   const logs = payload.map((item) => ({

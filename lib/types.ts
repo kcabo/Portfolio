@@ -31,9 +31,9 @@ export type Log = {
   body: string;
 };
 
-type UpdateResponse = ContentResponse<LogRaw>;
+type LogResponse = ContentResponse<LogRaw>;
 
-export type UpdateListResponse = ListContentsResponse<UpdateResponse>;
+export type LogListResponse = ListContentsResponse<LogResponse>;
 
 type Work = {
   coverImage: CoverImage;

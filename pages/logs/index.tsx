@@ -6,7 +6,7 @@ import {
 } from '@/lib/metaData';
 import Logs from '@/components/Logs';
 
-import fetchUpdates from '@/lib/fetchUpdates';
+import fetchLogs from '@/lib/fetchLogs';
 import { Log } from '@/lib/types';
 
 export default function Page({ logs }: { logs: Log[] }) {
@@ -28,7 +28,7 @@ export default function Page({ logs }: { logs: Log[] }) {
 }
 
 export async function getStaticProps() {
-  const logs = await fetchUpdates();
+  const logs = await fetchLogs();
 
   return {
     props: { logs },

@@ -6,7 +6,7 @@ import {
 } from '@/lib/metaData';
 import Home from '@/components/Home';
 
-import fetchUpdates from '@/lib/fetchUpdates';
+import fetchLogs from '@/lib/fetchLogs';
 import fetchSelectedWorks from '@/lib/fetchSelectedWorks';
 import { Log, WorkResponse } from '@/lib/types';
 
@@ -35,7 +35,7 @@ export default function Page({
 }
 
 export async function getStaticProps() {
-  const logs = await fetchUpdates();
+  const logs = await fetchLogs();
   const selectedWorks = await fetchSelectedWorks();
 
   return {
