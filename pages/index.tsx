@@ -1,4 +1,9 @@
 import Head from 'next/head';
+import {
+  baseUrl,
+  homeTitle as title,
+  homeDescription as description,
+} from '@/lib/metaData';
 import Home from '@/components/Home';
 
 import fetchUpdates from '@/lib/fetchUpdates';
@@ -15,7 +20,14 @@ export default function Page({
   return (
     <>
       <Head>
-        <title>Reo Kanzaki | Portfolio</title>
+        <title>{title}</title>
+        <meta property='og:title' content={title} />
+        <meta name='description' content={description} />
+        <meta property='og:description' content={description} />
+        <meta property='og:image' content={`${baseUrl}/OGP-top.webp`} />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content={`${baseUrl}`} />
+        <link rel='canonical' href={`${baseUrl}`} />
       </Head>
       <Home logs={logs} selectedWorks={selectedWorks} />
     </>
