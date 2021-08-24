@@ -12,18 +12,18 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
         <a className='relative block w-full h-48 border-b border-gray-300'>
           <Image
             src={data.coverImage.url}
-            alt='サムネイル'
+            alt={data.title}
             layout='fill'
             objectFit='cover'
           />
         </a>
       </Link>
 
-      <div className='flex flex-col h-[calc(100%-192px)] px-5 py-6'>
-        <div className='flex mb-2 align-baseline'>
+      <div className='flex flex-col h-[calc(100%-192px)] p-6'>
+        <div className='flex items-end mb-3'>
           <Link href={`/works/${encodeURIComponent(data.id)}`}>
             <a>
-              <h4 className='mr-2 text-xl font-medium text-gray-600'>
+              <h4 className='mr-3 text-xl font-medium leading-none text-gray-600'>
                 {data.title}
               </h4>
             </a>
@@ -31,7 +31,7 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
 
           {data.links?.homepage && (
             <Link href={data.links.homepage}>
-              <a className='px-1 pt-1'>
+              <a className='block'>
                 <ExternalLinkIcon className='w-5 h-5 text-gray-400' />
               </a>
             </Link>
@@ -39,7 +39,9 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
         </div>
         <Link href={`/works/${encodeURIComponent(data.id)}`}>
           <a className='flex-grow block'>
-            <div className='mb-6 text-gray-500'>{data.description}</div>
+            <div className='mb-6 text-sm leading-loose text-gray-500 md:text-base'>
+              {data.description}
+            </div>
           </a>
         </Link>
         <div className='flex flex-wrap gap-3'>

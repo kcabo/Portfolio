@@ -8,7 +8,7 @@ export default function Logs({ logs }: { logs: Log[] }) {
     <div className='p-10 bg-white md:rounded-lg'>
       <PageTitle
         title='Logs'
-        sub='主要なGitHubリポジトリの更新・Zennへの記事投稿・ポートフォリオのページ追加の情報一覧'
+        sub='活動記録です。主要なリポジトリの更新・Zennへの記事投稿・当サイトの更新が含まれます。'
       />
       <div className='flex flex-col gap-2'>
         {logs.map((log, index) => (
