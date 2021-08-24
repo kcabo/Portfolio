@@ -11,12 +11,12 @@ export default function About() {
   return (
     <div className='px-10 bg-white py-14 md:rounded-lg'>
       <div className='max-w-md mx-auto'>
-        <div className='relative mx-auto mb-8 overflow-hidden rounded-full w-60 h-60'>
+        <div className='relative mx-auto mb-8 overflow-hidden rounded-[63%37%60%40%/50%57%43%50%] w-60 h-60'>
           <Image
             src='/me.webp'
             layout='fill'
             objectFit='cover'
-            alt='シンジくんのまね'
+            alt='神崎伶央'
           />
         </div>
         <h1 className='mb-6 text-2xl font-bold tracking-wider text-center text-gray-600'>
@@ -24,7 +24,7 @@ export default function About() {
         </h1>
         <p className='mb-10 text-lg text-center text-gray-600'>
           Excelからプログラミングの世界に入りました。
-          <br />
+          <br className='hidden md:block' />
           経歴はLinkedInをご参照ください。
         </p>
         <div className='flex justify-center gap-6 mb-10'>
@@ -47,7 +47,7 @@ export default function About() {
             <p>TypeScriptとPythonが好きです</p>
           </div>
           <div>
-            <Caption text='Qualification' />
+            <Caption text='Qualifications' />
             <p>基本情報処理技術者・応用情報処理技術者・TOEIC920</p>
           </div>
           <div>

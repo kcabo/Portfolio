@@ -1,4 +1,4 @@
 .content a {
-  color: #4686da;
+  @apply text-link;
   margin-right: 3px;
 }

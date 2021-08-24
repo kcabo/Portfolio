@@ -8,6 +8,9 @@ module.exports = {
         'golden-main': '61.8%',
         'golden-rest': '38.3%',
       },
+      textColor: {
+        link: '#4686da',
+      },
     },
   },
   variants: {
