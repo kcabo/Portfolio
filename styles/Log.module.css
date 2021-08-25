@@ -1,0 +1,4 @@
+.content a {
+  @apply text-link;
+  margin-right: 3px;
+}

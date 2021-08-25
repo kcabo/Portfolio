@@ -1,0 +1,45 @@
+import PageTitle from '@/components/PageTitle';
+
+export default function Privacy() {
+  return (
+    <div className='p-10 bg-white md:rounded-lg'>
+      <PageTitle
+        title='プライバシーポリシー'
+        sub='当サイトではGoogleアナリティクスを使用しています。'
+      />
+      <div className='space-y-4 leading-loose'>
+        <p>
+          サイトの利便性向上及びコンテンツの改善のため、当サイトではGoogleアナリティクスを導入しています。
+          Googleアナリティクスはトラフィックデータの収集のためにCookieを使用しておりますが、これらは個人を特定するものではございません。
+        </p>
+        <p>
+          Googleアナリティクスによるデータの収集・処理方法につきましては、
+          <a
+            href='https://policies.google.com/technologies/partner-sites?hl=ja'
+            className='underline text-link'
+          >
+            こちら
+          </a>
+          をご参照ください。また多くのブラウザでは、これらのデータ収集をブロックできます。ブラウザに保存された既存のCookieを消去することもできます。
+        </p>
+        <p>
+          この規約に関しての詳細は
+          <a
+            href='https://marketingplatform.google.com/about/analytics/terms/jp/'
+            className='underline text-link'
+          >
+            Googleアナリティクス利用規約
+          </a>
+          や
+          <a
+            href='https://policies.google.com/privacy?hl=ja'
+            className='underline text-link'
+          >
+            Googleプライバシーポリシー
+          </a>
+          をご覧ください。
+        </p>
+      </div>
+    </div>
+  );
+}

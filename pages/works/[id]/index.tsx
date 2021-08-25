@@ -1,0 +1,61 @@
+import Head from 'next/head';
+import { baseUrl } from '@/lib/metaData';
+import WorkItem from '@/components/WorkItem';
+
+import fetchWorkItem from '@/lib/fetchWorkItem';
+import { fetchWorksOnlyID } from '@/lib/fetchWorks';
+import { WorkResponse } from '@/lib/types';
+
+export default function Page({ work }: { work: WorkResponse }) {
+  return (
+    <>
+      <Head>
+        <title>{work.title}</title>
+        <meta property='og:title' content={work.title} />
+        <meta property='og:image' content={work.coverImage.url} />
+        <meta property='og:type' content='article' />
+        <meta property='og:url' content={`${baseUrl}/works/${work.id}`} />
+        <link rel='canonical' href={`${baseUrl}/works/${work.id}`} />
+      </Head>
+      <WorkItem work={work} />
+    </>
+  );
+}
+
+export async function getStaticPaths() {
+  const workIds = await fetchWorksOnlyID();
+
+  const paths = workIds.map(({ id }) => ({
+    params: { id: id },
+  }));
+
+  // ビルド時に生成されてないページ(公開前のプレビュー)を受けたら、都度SSRする
+  // ページが生成されるまでブロックする。router.isFallbackは使用したくない
+  return { paths, fallback: 'blocking' };
+}
+
+// TODO: プレビューモードであることをページに表示・クッキー削除へのリンク
+// プレビューモード時でもフェッチは一回で十分ではないか？
+export async function getStaticProps({
+  params,
+  preview,
+  previewData,
+}: {
+  params: { id: string };
+  preview: boolean; // プレビューモード時にtrue
+  previewData: { id: string; draftKey: string };
+}) {
+  let work: WorkResponse | null;
+
+  if (preview) {
+    work = await fetchWorkItem(previewData.id, previewData.draftKey);
+  } else {
+    work = await fetchWorkItem(params.id);
+  }
+
+  if (work) {
+    return { props: { work } };
+  } else {
+    return { notFound: true };
+  }
+}

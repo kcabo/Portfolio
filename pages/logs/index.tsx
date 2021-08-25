@@ -1,22 +1,15 @@
 import Head from 'next/head';
 import {
   baseUrl,
-  homeTitle as title,
-  homeDescription as description,
+  logsTitle as title,
+  logsDescription as description,
 } from '@/lib/metaData';
-import Home from '@/components/Home';
+import Logs from '@/components/Logs';
 
 import fetchLogs from '@/lib/fetchLogs';
-import fetchSelectedWorks from '@/lib/fetchSelectedWorks';
-import { Log, WorkResponse } from '@/lib/types';
+import { Log } from '@/lib/types';
 
-export default function Page({
-  logs,
-  selectedWorks,
-}: {
-  logs: Log[];
-  selectedWorks: WorkResponse[];
-}) {
+export default function Page({ logs }: { logs: Log[] }) {
   return (
     <>
       <Head>
@@ -26,19 +19,18 @@ export default function Page({
         <meta property='og:description' content={description} />
         <meta property='og:image' content={`${baseUrl}/OGP-top.webp`} />
         <meta property='og:type' content='website' />
-        <meta property='og:url' content={`${baseUrl}`} />
-        <link rel='canonical' href={`${baseUrl}`} />
+        <meta property='og:url' content={`${baseUrl}/logs`} />
+        <link rel='canonical' href={`${baseUrl}/logs`} />
       </Head>
-      <Home logs={logs} selectedWorks={selectedWorks} />
+      <Logs logs={logs} />
     </>
   );
 }
 
 export async function getStaticProps() {
   const logs = await fetchLogs();
-  const selectedWorks = await fetchSelectedWorks();
 
   return {
-    props: { logs, selectedWorks },
+    props: { logs },
   };
 }

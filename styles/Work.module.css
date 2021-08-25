@@ -1,0 +1,73 @@
+.article {
+  @apply px-5 leading-loose;
+}
+
+@screen md {
+  .article {
+    @apply px-8;
+  }
+}
+@screen lg {
+  .article {
+    @apply px-10;
+  }
+}
+
+.article p,
+.article ul,
+.article ol,
+.article img,
+.article pre {
+  @apply mb-5;
+}
+
+.article img {
+  @apply mx-auto;
+}
+
+.article h2 {
+  @apply pb-2 mb-6 text-2xl font-bold text-gray-800 border-b-2;
+  border-color: #0496ff;
+}
+
+.article h3 {
+  @apply mb-2 text-xl font-bold;
+}
+
+.article h4 {
+  @apply mb-2 text-lg font-bold;
+}
+
+.article ul {
+  @apply pl-6 list-disc;
+}
+
+.article ol {
+  @apply pl-6 list-decimal;
+}
+
+.article a {
+  @apply text-link;
+}
+
+.article u {
+  background: linear-gradient(transparent 70%, yellow 70%);
+  text-decoration: none;
+}
+
+.article code {
+  @apply px-1 py-1 bg-gray-200 rounded;
+  font-size: 0.8em;
+}
+
+.article pre {
+  @apply p-5 leading-tight bg-gray-800 rounded-lg;
+}
+
+.article pre code {
+  @apply p-0 text-base text-white bg-transparent;
+}
+
+.article blockquote {
+  @apply py-3 pl-4 pr-1 text-gray-600 border-l-4 border-gray-500 bg-gray-50;
+}
