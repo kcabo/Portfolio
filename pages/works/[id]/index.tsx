@@ -29,14 +29,33 @@ export async function getStaticPaths() {
     params: { id: id },
   }));
 
-  // ビルド時に生成されないページは404とする
-  return { paths, fallback: false };
+  // ビルド時に生成されてないページ(公開前のプレビュー)を受けたら、都度SSRする
+  // ページが生成されるまでブロックする。router.isFallbackは使用したくない
+  return { paths, fallback: 'blocking' };
 }
 
-export async function getStaticProps({ params }: { params: { id: string } }) {
-  const work = await fetchWorkItem(params.id);
+// TODO: プレビューモードであることをページに表示・クッキー削除へのリンク
+// プレビューモード時でもフェッチは一回で十分ではないか？
+export async function getStaticProps({
+  params,
+  preview,
+  previewData,
+}: {
+  params: { id: string };
+  preview: boolean; // プレビューモード時にtrue
+  previewData: { id: string; draftKey: string };
+}) {
+  let work: WorkResponse | null;
 
-  return {
-    props: { work },
-  };
+  if (preview) {
+    work = await fetchWorkItem(previewData.id, previewData.draftKey);
+  } else {
+    work = await fetchWorkItem(params.id);
+  }
+
+  if (work) {
+    return { props: { work } };
+  } else {
+    return { notFound: true };
+  }
 }

@@ -83,6 +83,11 @@ export type IDListResponse = ListContentsResponse<{
   id: string;
 }>;
 
+export type PreviewWorkQuery = {
+  id: string;
+  draftKey: string;
+};
+
 export type BadgeJsonSchema = {
   schemaVersion: 1;
   label: string;
