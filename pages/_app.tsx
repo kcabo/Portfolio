@@ -1,10 +1,22 @@
-import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import Layout from '../components/Layout';
+import Head from 'next/head';
+
+import '@/styles/globals.css';
+import Layout from '@/components/Layout';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
+      <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/icon.svg' type='image/svg+xml' />
+        <link rel='icon alternate' href='/favicon.ico' type='image/png' />
+        <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
+        <link rel='manifest' href='/site.webmanifest' />
+        <meta name='theme-color' content='#ffffff' />
+        <meta property='og:site_name' content='Reo Kanzaki | Portfolio' />
+        <meta name='twitter:card' content='summary_large_image' />
+      </Head>
       <Component {...pageProps} />
     </Layout>
   );
