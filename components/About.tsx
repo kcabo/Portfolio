@@ -28,16 +28,32 @@ export default function About() {
           経歴はLinkedInをご参照ください。
         </p>
         <div className='flex justify-center gap-6 mb-10'>
-          <a href='https://github.com/kcabo'>
+          <a
+            href='https://github.com/kcabo'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <Github size={36} color='#181717' />
           </a>
-          <a href='https://zenn.dev/kcabo'>
+          <a
+            href='https://zenn.dev/kcabo'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <Zenn size={36} color='#3EA8FF' />
           </a>
-          <a href='https://www.facebook.com/reo.kanzaki.1/'>
+          <a
+            href='https://www.facebook.com/reo.kanzaki.1/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <Facebook size={36} color='#1877F2' />
           </a>
-          <a href='https://www.linkedin.com/in/reo-kanzaki/'>
+          <a
+            href='https://www.linkedin.com/in/reo-kanzaki/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <Linkedin size={36} color='#0A66C2' />
           </a>
         </div>
