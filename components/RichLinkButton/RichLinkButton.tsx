@@ -27,7 +27,11 @@ export default function RichLinkButton({
 
   return (
     <Link href={url}>
-      <a className={'flex rounded-lg shadow-lg ' + styleClassName}>
+      <a
+        className={'flex rounded-lg shadow-lg ' + styleClassName}
+        target='_blank'
+        rel='noopener noreferrer'
+      >
         <div className='p-4'>{icon}</div>
         <div className='flex flex-col justify-center'>
           <div className='mb-2 font-medium leading-none'>{mainText}</div>

@@ -24,9 +24,14 @@ export default function Footer() {
         <div className='w-full h-px mt-12 mb-8 bg-white opacity-30'></div>
         <div className='mb-2 text-sm text-center'>© 2021 Reo Kanzaki</div>
         <div className='text-sm text-center'>
-          The source code of this blog is available{' '}
-          <a href='https://github.com/kcabo/Portfolio' className='underline'>
-            here
+          The source code of this blog is available at{' '}
+          <a
+            href='https://github.com/kcabo/Portfolio'
+            className='underline'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            GitHub
           </a>
           .
         </div>

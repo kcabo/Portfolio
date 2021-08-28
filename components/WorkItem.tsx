@@ -23,12 +23,12 @@ export default function WorkItem({ work }: { work: WorkResponse }) {
           layout='responsive'
           className='md:rounded-t-lg'
         />
-        <div
+        <h1
           className='relative w-4/5 max-w-md px-5 py-4 -mt-10 text-3xl font-bold text-center break-words'
           style={themeStyle}
         >
           {work.title}
-        </div>
+        </h1>
         <div className='px-8 mt-6 mb-10'>
           <div className='mb-3 text-sm text-gray-500'>{work.date.text}</div>
           <div className='mb-4'>{work.description}</div>
