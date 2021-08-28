@@ -10,8 +10,8 @@ export default function Page({ work }: { work: WorkResponse }) {
   return (
     <>
       <Head>
-        <title>{work.title}</title>
-        <meta property='og:title' content={work.title} />
+        <title>{work.title + '| Reo Kanzaki'}</title>
+        <meta property='og:title' content={work.title + '| Reo Kanzaki'} />
         <meta property='og:image' content={work.coverImage.url} />
         <meta property='og:type' content='article' />
         <meta property='og:url' content={`${baseUrl}/works/${work.id}`} />
