@@ -7,7 +7,7 @@ export default function Header() {
     <header className='pt-12 pb-6 md:pb-10'>
       <div className='container mx-auto'>
         <Link href='/'>
-          <a className='block w-8 mx-auto mb-2'>
+          <a className='block w-8 mx-auto mb-2' aria-label='Go to top'>
             <Logo width={32} />
           </a>
         </Link>

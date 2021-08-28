@@ -12,7 +12,7 @@ export default function LogItem({ log }: { log: Log }) {
         <div className='mx-2 font-medium leading-none text-gray-600'>
           {log.category}
         </div>
-        <div className='text-sm leading-none text-gray-400'>{log.date}</div>
+        <div className='text-sm leading-none text-gray-500'>{log.date}</div>
       </div>
       <div
         className={'text-sm text-gray-600 lg:text-base ' + styles.content}
