@@ -1,4 +1,5 @@
-export const baseUrl = 'https://kcabo.vercel.app';
+export const baseUrl =
+  process.env.NEXT_PUBLIC_VERCEL_URL || 'https://example.com';
 export const homeTitle = 'Reo Kanzaki - Portfolio';
 export const homeDescription =
   '神崎伶央の個人サイトです。これまでに開発したソフトウェアや執筆した記事を紹介しています。';
