@@ -18,7 +18,7 @@ export default function Privacy() {
             href='https://policies.google.com/technologies/partner-sites?hl=ja'
             className='underline text-link'
             target='_blank'
-            rel='noopener'
+            rel='noopener noreferrer'
           >
             こちら
           </a>
@@ -30,7 +30,7 @@ export default function Privacy() {
             href='https://marketingplatform.google.com/about/analytics/terms/jp/'
             className='underline text-link'
             target='_blank'
-            rel='noopener'
+            rel='noopener noreferrer'
           >
             Googleアナリティクス利用規約
           </a>
@@ -39,7 +39,7 @@ export default function Privacy() {
             href='https://policies.google.com/privacy?hl=ja'
             className='underline text-link'
             target='_blank'
-            rel='noopener'
+            rel='noopener noreferrer'
           >
             Googleプライバシーポリシー
           </a>

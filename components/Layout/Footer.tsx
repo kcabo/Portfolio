@@ -29,7 +29,7 @@ export default function Footer() {
             href='https://github.com/kcabo/Portfolio'
             className='underline'
             target='_blank'
-            rel='noopener'
+            rel='noopener noreferrer'
           >
             GitHub
           </a>
