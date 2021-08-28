@@ -23,9 +23,9 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
         <div className='flex items-end mb-3'>
           <Link href={`/works/${encodeURIComponent(data.id)}`}>
             <a>
-              <h4 className='mr-3 text-xl font-medium leading-none text-gray-600'>
+              <h3 className='mr-3 text-xl font-medium leading-none text-gray-600'>
                 {data.title}
-              </h4>
+              </h3>
             </a>
           </Link>
 
