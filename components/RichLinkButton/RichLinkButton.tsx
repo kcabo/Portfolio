@@ -30,7 +30,7 @@ export default function RichLinkButton({
       <a
         className={'flex rounded-lg shadow-lg ' + styleClassName}
         target='_blank'
-        rel='noopener'
+        rel='noopener noreferrer'
       >
         <div className='p-4'>{icon}</div>
         <div className='flex flex-col justify-center'>
