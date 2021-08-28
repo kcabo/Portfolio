@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_VERCEL_URL || 'https://example.com',
+  siteUrl: 'https://kcabo.vercel.app',
   changefreq: 'monthly',
   generateRobotsTxt: true,
 };
