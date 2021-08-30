@@ -46,10 +46,6 @@
   @apply pl-6 list-decimal;
 }
 
-.article a {
-  @apply text-link;
-}
-
 .article u {
   background: linear-gradient(transparent 70%, yellow 70%);
   text-decoration: none;

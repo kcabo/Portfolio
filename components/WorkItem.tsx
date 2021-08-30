@@ -46,7 +46,7 @@ export default function WorkItem({ work }: { work: WorkResponse }) {
           dangerouslySetInnerHTML={{
             __html: work.body,
           }}
-          className={styles.article}
+          className={'colored-link ' + styles.article}
         />
       </div>
       <div className=''>

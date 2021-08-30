@@ -2,7 +2,7 @@ import PageTitle from '@/components/PageTitle';
 
 export default function Privacy() {
   return (
-    <div className='p-10 bg-white md:rounded-lg'>
+    <div className='p-10 bg-white md:rounded-lg colored-link'>
       <PageTitle
         title='プライバシーポリシー'
         sub='当サイトではGoogleアナリティクスを使用しています。'
@@ -16,7 +16,6 @@ export default function Privacy() {
           Googleアナリティクスによるデータの収集・処理方法につきましては、
           <a
             href='https://policies.google.com/technologies/partner-sites?hl=ja'
-            className='underline text-link'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -28,7 +27,6 @@ export default function Privacy() {
           この規約に関しての詳細は
           <a
             href='https://marketingplatform.google.com/about/analytics/terms/jp/'
-            className='underline text-link'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -37,7 +35,6 @@ export default function Privacy() {
           や
           <a
             href='https://policies.google.com/privacy?hl=ja'
-            className='underline text-link'
             target='_blank'
             rel='noopener noreferrer'
           >
