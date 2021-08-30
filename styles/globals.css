@@ -5,3 +5,9 @@
 body {
   background-color: #f5f7f9;
 }
+.colored-link a {
+  color: #4686da;
+}
+.colored-link a:hover {
+  text-decoration: underline;
+}

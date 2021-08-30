@@ -1,6 +1,5 @@
 import { Github, Zenn } from '@icons-pack/react-simple-icons';
 import Logo from '../public/logo.svg';
-import styles from '@/styles/Log.module.css';
 
 import { Log, LogCategory } from '@/lib/types';
 
@@ -15,7 +14,7 @@ export default function LogItem({ log }: { log: Log }) {
         <div className='text-sm leading-none text-gray-500'>{log.date}</div>
       </div>
       <div
-        className={'text-sm text-gray-600 lg:text-base ' + styles.content}
+        className='text-sm text-gray-600 lg:text-base colored-link'
         dangerouslySetInnerHTML={{
           __html: log.body,
         }}
