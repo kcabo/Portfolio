@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <link rel='icon' href='/icon.svg' type='image/svg+xml' />
         <link rel='icon alternate' href='/favicon.ico' type='image/png' />
         <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
-        <link rel='manifest' href='/site.webmanifest' />
+        <link rel='manifest' href='/manifest.json' />
         <meta name='theme-color' content='#ffffff' />
         <meta property='og:site_name' content='Reo Kanzaki - Portfolio' />
         <meta name='twitter:card' content='summary_large_image' />
