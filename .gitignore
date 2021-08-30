@@ -36,3 +36,7 @@ yarn-error.log*
 # next-sitemap
 sitemap.xml
 robots.txt
+
+# next-pwa
+sw.js
+workbox-*.js
