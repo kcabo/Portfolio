@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
         <link rel='manifest' href='/site.webmanifest' />
         <meta name='theme-color' content='#ffffff' />
-        <meta property='og:site_name' content='Reo Kanzaki | Portfolio' />
+        <meta property='og:site_name' content='Reo Kanzaki - Portfolio' />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
       <Component {...pageProps} />
