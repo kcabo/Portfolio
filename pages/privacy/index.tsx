@@ -4,11 +4,13 @@ import {
   privacyTitle as title,
   privacyDescription as description,
 } from '@/lib/metaData';
+
 import Privacy from '@/components/Privacy';
+import Layout from '@/components/Layout';
 
 export default function Page() {
   return (
-    <>
+    <Layout>
       <Head>
         <title>{title}</title>
         <meta property='og:title' content={title} />
@@ -20,6 +22,6 @@ export default function Page() {
         <link rel='canonical' href={`${baseUrl}/privacy`} />
       </Head>
       <Privacy />
-    </>
+    </Layout>
   );
 }

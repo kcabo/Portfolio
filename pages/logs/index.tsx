@@ -4,14 +4,16 @@ import {
   logsTitle as title,
   logsDescription as description,
 } from '@/lib/metaData';
+
 import Logs from '@/components/Logs';
+import Layout from '@/components/Layout';
 
 import fetchLogs from '@/lib/fetchLogs';
 import { Log } from '@/lib/types';
 
 export default function Page({ logs }: { logs: Log[] }) {
   return (
-    <>
+    <Layout>
       <Head>
         <title>{title}</title>
         <meta property='og:title' content={title} />
@@ -23,7 +25,7 @@ export default function Page({ logs }: { logs: Log[] }) {
         <link rel='canonical' href={`${baseUrl}/logs`} />
       </Head>
       <Logs logs={logs} />
-    </>
+    </Layout>
   );
 }
 
