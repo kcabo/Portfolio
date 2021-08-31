@@ -1,7 +1,5 @@
 import Link from 'next/link';
 
-import styles from '@/styles/RichLinkButton.module.css';
-
 type Props = {
   icon: React.ReactElement;
   mainText: string;
@@ -17,18 +15,15 @@ export default function RichLinkButton({
   buttonType,
   url,
 }: Props) {
-  let styleClassName = '';
-
-  if (buttonType == 'github') {
-    styleClassName = styles.github;
-  } else {
-    styleClassName = styles.homepage;
-  }
-
   return (
     <Link href={url}>
       <a
-        className={'flex rounded-lg shadow-lg ' + styleClassName}
+        className={
+          'flex rounded-lg shadow-lg min-w-[280px] ' +
+          (buttonType == 'github'
+            ? 'text-gray-600 border border-gray-300 bg-white'
+            : 'text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff]')
+        }
         target='_blank'
         rel='noopener noreferrer'
       >
