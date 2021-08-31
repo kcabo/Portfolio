@@ -1,12 +1,19 @@
 import Head from 'next/head';
 import { baseUrl } from '@/lib/metaData';
 import WorkItem from '@/components/WorkItem';
+import PreviewAlert from '@/components/PreviewAlert';
 
 import fetchWorkItem from '@/lib/fetchWorkItem';
 import { fetchWorksOnlyID } from '@/lib/fetchWorks';
 import { WorkResponse } from '@/lib/types';
 
-export default function Page({ work }: { work: WorkResponse }) {
+export default function Page({
+  work,
+  preview,
+}: {
+  work: WorkResponse;
+  preview: boolean;
+}) {
   return (
     <>
       <Head>
@@ -19,6 +26,7 @@ export default function Page({ work }: { work: WorkResponse }) {
         <meta property='og:url' content={`${baseUrl}/works/${work.id}`} />
         <link rel='canonical' href={`${baseUrl}/works/${work.id}`} />
       </Head>
+      {preview && <PreviewAlert />}
       <WorkItem work={work} />
     </>
   );
@@ -36,27 +44,26 @@ export async function getStaticPaths() {
   return { paths, fallback: 'blocking' };
 }
 
-// TODO: プレビューモードであることをページに表示・クッキー削除へのリンク
-// プレビューモード時でもフェッチは一回で十分ではないか？
+// NOTE: プレビューモード時でもフェッチは一回で十分ではないか？
 export async function getStaticProps({
   params,
   preview,
   previewData,
 }: {
   params: { id: string };
-  preview: boolean; // プレビューモード時にtrue
-  previewData: { id: string; draftKey: string };
+  preview?: boolean; // プレビューモード時にtrue
+  previewData?: { id: string; draftKey: string };
 }) {
   let work: WorkResponse | null;
 
-  if (preview) {
+  if (preview && previewData) {
     work = await fetchWorkItem(previewData.id, previewData.draftKey);
   } else {
     work = await fetchWorkItem(params.id);
   }
 
   if (work) {
-    return { props: { work } };
+    return { props: { work, preview: preview ?? false } };
   } else {
     return { notFound: true };
   }
