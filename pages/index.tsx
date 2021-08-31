@@ -4,7 +4,9 @@ import {
   homeTitle as title,
   homeDescription as description,
 } from '@/lib/metaData';
+
 import Home from '@/components/Home';
+import Layout from '@/components/Layout';
 
 import fetchLogs from '@/lib/fetchLogs';
 import fetchSelectedWorks from '@/lib/fetchSelectedWorks';
@@ -18,7 +20,7 @@ export default function Page({
   selectedWorks: WorkResponse[];
 }) {
   return (
-    <>
+    <Layout>
       <Head>
         <title>{title}</title>
         <meta property='og:title' content={title} />
@@ -30,7 +32,7 @@ export default function Page({
         <link rel='canonical' href={`${baseUrl}`} />
       </Head>
       <Home logs={logs} selectedWorks={selectedWorks} />
-    </>
+    </Layout>
   );
 }
 

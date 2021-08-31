@@ -4,14 +4,16 @@ import {
   worksTitle as title,
   worksDescription as description,
 } from '@/lib/metaData';
+
 import Works from '@/components/Works';
+import Layout from '@/components/Layout';
 
 import fetchWorks from '@/lib/fetchWorks';
 import { WorkResponse } from '@/lib/types';
 
 export default function Page({ works }: { works: WorkResponse[] }) {
   return (
-    <>
+    <Layout>
       <Head>
         <title>{title}</title>
         <meta property='og:title' content={title} />
@@ -23,7 +25,7 @@ export default function Page({ works }: { works: WorkResponse[] }) {
         <link rel='canonical' href={`${baseUrl}/works`} />
       </Head>
       <Works works={works} />
-    </>
+    </Layout>
   );
 }
 

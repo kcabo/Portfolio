@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import { baseUrl } from '@/lib/metaData';
+
 import WorkItem from '@/components/WorkItem';
 import PreviewAlert from '@/components/PreviewAlert';
+import Layout from '@/components/Layout';
 
 import fetchWorkItem from '@/lib/fetchWorkItem';
 import { fetchWorksOnlyID } from '@/lib/fetchWorks';
@@ -15,7 +17,7 @@ export default function Page({
   preview: boolean;
 }) {
   return (
-    <>
+    <Layout>
       <Head>
         <title>{work.title + ' | Reo Kanzaki'}</title>
         <meta name='description' content={work.description} />
@@ -28,7 +30,7 @@ export default function Page({
       </Head>
       {preview && <PreviewAlert />}
       <WorkItem work={work} />
-    </>
+    </Layout>
   );
 }
 

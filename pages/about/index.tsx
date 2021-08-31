@@ -4,11 +4,13 @@ import {
   aboutTitle as title,
   aboutDescription as description,
 } from '@/lib/metaData';
+
 import About from '@/components/About';
+import Layout from '@/components/Layout';
 
 export default function Page() {
   return (
-    <>
+    <Layout>
       <Head>
         <title>{title}</title>
         <meta property='og:title' content={title} />
@@ -20,6 +22,6 @@ export default function Page() {
         <link rel='canonical' href={`${baseUrl}/about`} />
       </Head>
       <About />
-    </>
+    </Layout>
   );
 }

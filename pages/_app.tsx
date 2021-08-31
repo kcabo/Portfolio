@@ -2,11 +2,10 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
 import '@/styles/globals.css';
-import Layout from '@/components/Layout';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
+    <>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/icon.svg' type='image/svg+xml' />
@@ -18,6 +17,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
       <Component {...pageProps} />
-    </Layout>
+    </>
   );
 }
