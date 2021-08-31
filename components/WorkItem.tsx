@@ -9,8 +9,8 @@ import { WorkResponse } from '@/lib/types';
 
 export default function WorkItem({ work }: { work: WorkResponse }) {
   const themeStyle = {
-    color: work.theme?.textColor || 'white',
-    background: work.theme?.backgroundColor || '#111827',
+    color: 'white',
+    background: work.themeColor || '#111827',
   };
   return (
     <div className='grid md:px-8 grid-cols-1 gap-10 lg:grid-cols-[1fr,300px]'>
