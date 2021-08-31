@@ -8,7 +8,7 @@ export function OpenGithub({ url }: { url: string }) {
   return (
     <RichLinkButton
       icon={<Github size={40} />}
-      mainText='View code on Github'
+      mainText='View on Github'
       subText={`Last push: ${repoUpdateDate}`}
       buttonType='github'
       url={url}

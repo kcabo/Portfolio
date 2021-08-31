@@ -29,16 +29,16 @@ export default function WorkItem({ work }: { work: WorkResponse }) {
         >
           {work.title}
         </h1>
-        <div className='px-8 mt-6 mb-10'>
+        <div className='px-8 mt-6 mb-6'>
           <div className='mb-3 text-sm text-gray-500'>{work.date.text}</div>
           <div className='mb-4'>{work.description}</div>
-          <div className='flex flex-wrap gap-3'>
+          <div className='flex flex-wrap gap-2'>
             {work.tags.map((tag, index) => (
               <Tag key={index} text={tag} />
             ))}
           </div>
         </div>
-        <div className='block w-2/3 mx-auto lg:hidden min-w-[280px] max-w-[400px]'>
+        <div className='flex flex-col items-center justify-center gap-4 mb-8 md:flex-row lg:hidden'>
           {work.links?.homepage && <OpenHomepage url={work.links.homepage} />}
           {work.links?.github && <OpenGithub url={work.links.github} />}
         </div>
@@ -50,7 +50,7 @@ export default function WorkItem({ work }: { work: WorkResponse }) {
         />
       </div>
       <div className=''>
-        <div className='hidden lg:block'>
+        <div className='hidden mb-10 space-y-4 lg:block'>
           {work.links?.homepage && <OpenHomepage url={work.links.homepage} />}
           {work.links?.github && <OpenGithub url={work.links.github} />}
         </div>
