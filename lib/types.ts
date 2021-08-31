@@ -42,7 +42,7 @@ type Work = {
   date: Date;
   links: Links | null;
   tags: string[];
-  theme: Theme | null;
+  themeColor: string | null;
   body: string;
   relatedWorks: WorkResponse[];
 };
@@ -63,12 +63,6 @@ type Links = {
   fieldId: 'links';
   github?: string;
   homepage?: string;
-};
-
-type Theme = {
-  fieldId: 'theme';
-  backgroundColor?: string;
-  textColor?: string;
 };
 
 export type WorkResponse = ContentResponse<Work>;
