@@ -49,7 +49,7 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
             </div>
           </a>
         </Link>
-        <div className='flex flex-wrap gap-3'>
+        <div className='flex flex-wrap gap-1.5'>
           {data.tags.map((tag, index) => (
             <Tag key={index} text={tag} />
           ))}
