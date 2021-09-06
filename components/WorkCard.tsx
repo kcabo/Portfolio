@@ -7,7 +7,7 @@ import { WorkResponse } from '@/lib/types';
 
 export default function WorkCard({ data }: { data: WorkResponse }) {
   return (
-    <div className='overflow-hidden bg-white rounded-lg shadow-lg'>
+    <div className='overflow-hidden transition bg-white rounded-lg shadow-lg lg:hover:-translate-y-2 '>
       <Link href={`/works/${encodeURIComponent(data.id)}`}>
         <a className='relative block w-full border-b border-gray-300 h-44'>
           <Image

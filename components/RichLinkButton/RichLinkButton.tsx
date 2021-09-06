@@ -19,7 +19,7 @@ export default function RichLinkButton({
     <Link href={url}>
       <a
         className={
-          'flex rounded-lg shadow-lg w-[280px] lg:w-full ' +
+          'flex rounded-lg shadow-lg w-[280px] hover:opacity-90  lg:w-full ' +
           (buttonType == 'github'
             ? 'text-gray-600 border border-gray-300 bg-white'
             : 'text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff]')
