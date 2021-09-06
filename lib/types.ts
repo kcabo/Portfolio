@@ -42,7 +42,7 @@ type Work = {
   date: Date;
   links: Links | null;
   tags: string[];
-  themeColor: string | null;
+  themeColor: string;
   body: string;
   relatedWorks: WorkResponse[];
 };

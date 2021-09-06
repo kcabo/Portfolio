@@ -8,13 +8,9 @@ import WorkCard from '@/components/WorkCard';
 import { WorkResponse } from '@/lib/types';
 
 export default function WorkItem({ work }: { work: WorkResponse }) {
-  const themeStyle = {
-    color: 'white',
-    background: work.themeColor || '#111827',
-  };
   return (
     <div className='grid md:px-8 grid-cols-1 gap-10 lg:grid-cols-[1fr,300px]'>
-      <div className='pb-6 bg-white md:rounded-lg'>
+      <div className='pb-10 bg-white md:rounded-lg'>
         <Image
           src={work.coverImage.url}
           alt={work.title}
@@ -23,15 +19,12 @@ export default function WorkItem({ work }: { work: WorkResponse }) {
           layout='responsive'
           className='md:rounded-t-lg'
         />
-        <h1
-          className='relative w-4/5 max-w-md px-5 py-4 -mt-10 text-3xl font-bold text-center break-words'
-          style={themeStyle}
-        >
-          {work.title}
-        </h1>
-        <div className='px-8 mt-6 mb-6'>
-          <div className='mb-3 text-sm text-gray-500'>{work.date.text}</div>
-          <div className='mb-4'>{work.description}</div>
+        <div className='px-8 my-6 lg:px-12'>
+          <div className='mb-2 text-sm text-gray-600'>{work.date.text}</div>
+          <h1 className='mb-3 text-3xl font-bold text-gray-700 md:text-4xl md:mb-4'>
+            {work.title}
+          </h1>
+          <div className='mb-4 text-gray-800'>{work.description}</div>
           <div className='flex flex-wrap gap-2'>
             {work.tags.map((tag, index) => (
               <Tag key={index} text={tag} />
