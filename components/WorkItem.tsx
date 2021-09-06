@@ -38,7 +38,7 @@ export default function WorkItem({ work }: { work: WorkResponse }) {
             ))}
           </div>
         </div>
-        <div className='flex flex-col items-center justify-center gap-4 mb-8 md:flex-row lg:hidden'>
+        <div className='flex flex-col items-center justify-center gap-4 mb-8 sm:flex-row lg:hidden'>
           {work.links?.homepage && <OpenHomepage url={work.links.homepage} />}
           {work.links?.github && <OpenGithub url={work.links.github} />}
         </div>

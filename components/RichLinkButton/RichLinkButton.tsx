@@ -19,7 +19,7 @@ export default function RichLinkButton({
     <Link href={url}>
       <a
         className={
-          'flex rounded-lg shadow-lg min-w-[280px] ' +
+          'flex rounded-lg shadow-lg w-[280px] lg:w-full ' +
           (buttonType == 'github'
             ? 'text-gray-600 border border-gray-300 bg-white'
             : 'text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff]')
@@ -30,7 +30,9 @@ export default function RichLinkButton({
         <div className='p-4'>{icon}</div>
         <div className='flex flex-col justify-center'>
           <div className='mb-2 font-medium leading-none'>{mainText}</div>
-          <div className='text-sm leading-none opacity-80'>{subText}</div>
+          <div className='text-sm leading-none truncate w-52 opacity-80'>
+            {subText}
+          </div>
         </div>
       </a>
     </Link>
