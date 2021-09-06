@@ -25,7 +25,7 @@ export default function About() {
         <p className='mb-10 text-lg text-center text-gray-600'>
           TSを書きます。前はPython、その前はVBAで遊んでいました。
           <br className='hidden md:block' />
-          経歴はLinkedInをご参照ください。
+          たまに泳ぎます。そんなに速くないです。
         </p>
         <SocialLinks />
         <div>
@@ -82,7 +82,7 @@ function Caption({ text }: { text: string }) {
 
 function SocialLinks() {
   return (
-    <div className='flex justify-center gap-6 mb-10'>
+    <div className='flex justify-center gap-6 mb-10 md:gap-8'>
       <a
         href='https://github.com/kcabo'
         target='_blank'
