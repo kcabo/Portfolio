@@ -11,3 +11,4 @@ export const privacyTitle = 'プライバシーポリシー | Reo Kanzaki';
 export const privacyDescription = '当サイトのプライバシーポリシーについて';
 export const logsTitle = 'Logs | Reo Kanzaki';
 export const logsDescription = 'これまでの主な活動の記録';
+export const notFoundTitle = 'Error 404 | Reo Kanzaki';
