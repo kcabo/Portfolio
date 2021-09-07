@@ -3,6 +3,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/kcabo/Portfolio?logo=Github)
 ![GitHub repo size](https://img.shields.io/github/repo-size/kcabo/Portfolio?logo=Github)
 ![Lines of code](https://tokei.rs/b1/github/kcabo/Portfolio?category=code)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkcabo%2FPortfolio.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkcabo%2FPortfolio?ref=badge_shield)
 
 This app is hosted on Vercel. Feel free to visit! >> [https://kcabo.vercel.app](https://kcabo.vercel.app)
 
@@ -17,6 +18,9 @@ This app is hosted on Vercel. Feel free to visit! >> [https://kcabo.vercel.app](
 ## License
 
 I don't apply any license to this repository (it's awkward for me to do so). I just accept [GitHub terms of service](https://docs.github.com/en/github/site-policy/github-terms-of-service#5-license-grant-to-other-users)
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkcabo%2FPortfolio.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkcabo%2FPortfolio?ref=badge_large)
 
 #### ----- Auto generated doc starts here -----
 
