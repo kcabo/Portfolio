@@ -4,7 +4,11 @@ import { WorkListResponse, IDListResponse } from './types';
 export default async function fetchWorks() {
   const response = await client.get<WorkListResponse>({
     endpoint: 'works',
-    queries: { orders: '-date.numeral' },
+    queries: {
+      limit: 30,
+      orders: '-date.numeral',
+      fields: 'id,coverImage,title,description,links,tags',
+    },
   });
 
   const works = response.contents;
