@@ -37,7 +37,7 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <ExternalLinkIcon className='w-5 h-5 text-gray-400' />
+                <ExternalLinkIcon className='w-5 h-5 text-gray-400 hover:text-gray-600' />
               </a>
             </Link>
           )}
