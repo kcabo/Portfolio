@@ -20,6 +20,10 @@ export default function Footer() {
           <Link href='/privacy'>
             <a>Privacy Policy</a>
           </Link>
+          <div className='hidden font-bold opacity-80 md:block'>・</div>
+          <a href='https://github.com/kcabo/Portfolio/blob/main/CREDITS.md'>
+            Credits
+          </a>
         </nav>
         <div className='w-full h-px mt-12 mb-8 bg-white opacity-30'></div>
         <div className='mb-2 text-sm text-center'>© 2021 Reo Kanzaki</div>
