@@ -1,5 +1,6 @@
 import { client } from './client';
 import { WorkResponse } from './types';
+import formatRichText from './format';
 
 // プレビューモード時のみdraftKeyが与えられる
 // NOTE: contentIdが間違っていると404が返され、SDKからエラーが放たれる。
@@ -14,6 +15,11 @@ export default async function fetchWorkItem(
       contentId: contentId,
       queries: { draftKey: draftKey },
     });
+
+    // gif画像にクエリ文字列がついていると静止画になってしまうので、gifはクエリ文字列を取り除く
+    const html = formatRichText(response.body);
+    response.body = html;
+
     return response;
   } catch (error) {
     console.error(error);
