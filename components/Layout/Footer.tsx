@@ -21,7 +21,7 @@ export default function Footer() {
             <a>Privacy Policy</a>
           </Link>
           <div className='hidden font-bold opacity-80 md:block'>・</div>
-          <a href='https://github.com/kcabo/Portfolio/blob/main/CREDITS.md'>
+          <a href='https://github.com/kcabo/Portfolio/blob/main/CREDITS.json'>
             Credits
           </a>
         </nav>
