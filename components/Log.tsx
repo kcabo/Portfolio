@@ -1,5 +1,5 @@
 import { Github, Zenn } from '@icons-pack/react-simple-icons';
-import Logo from '../public/logo.svg';
+import Logo from '@/components/Logo';
 
 import { Log, LogCategory } from '@/lib/types';
 

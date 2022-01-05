@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Logo from '../../public/logo.svg';
+import Logo from '@/components/Logo';
 
 export default function Header() {
   return (
@@ -8,7 +8,7 @@ export default function Header() {
       <div className='container mx-auto'>
         <Link href='/'>
           <a className='block w-8 mx-auto mb-2' aria-label='Go to top'>
-            <Logo width={32} />
+            <Logo width={24} />
           </a>
         </Link>
         <nav className='flex justify-center gap-6 mx-auto'>
