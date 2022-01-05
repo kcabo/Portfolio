@@ -4,10 +4,10 @@ import Logo from '@/components/Logo';
 
 export default function Header() {
   return (
-    <header className='pt-12 pb-6 md:pb-10'>
+    <header className='pt-10 pb-6'>
       <div className='container mx-auto'>
         <Link href='/'>
-          <a className='block w-8 mx-auto mb-2' aria-label='Go to top'>
+          <a className='block w-6 mx-auto mb-1' aria-label='Go to top'>
             <Logo width={24} />
           </a>
         </Link>
