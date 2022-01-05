@@ -1,10 +1,11 @@
-import type { NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { fetchCommitCount } from '@/lib/githubAPI';
 import { ShieldsIoCustomBadge } from '@/lib/types';
 import { nowYear } from '@/lib/dateUtil';
 
 export default async function handler(
+  req: NextApiRequest,
   res: NextApiResponse<ShieldsIoCustomBadge>
 ) {
   const year = nowYear();

@@ -1,9 +1,10 @@
-import type { NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { fetchLatestPushDate } from '@/lib/githubAPI';
 import { ShieldsIoCustomBadge } from '@/lib/types';
 
 export default async function handler(
+  req: NextApiRequest,
   res: NextApiResponse<ShieldsIoCustomBadge>
 ) {
   const lastCommitDate = await fetchLatestPushDate();
