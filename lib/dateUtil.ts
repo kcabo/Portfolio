@@ -5,3 +5,9 @@ export function toDate(isoString: string): string {
   const date = dayjs(isoString).locale(ja).format('YYYY-MM-DD');
   return date;
 }
+
+export function nowYear() {
+  const now = dayjs();
+  const year = now.year();
+  return year;
+}

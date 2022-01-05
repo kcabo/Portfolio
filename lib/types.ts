@@ -82,7 +82,7 @@ export type PreviewWorkQuery = {
   draftKey: string;
 };
 
-export type BadgeJsonSchema = {
+export type ShieldsIoCustomBadge = {
   schemaVersion: 1;
   label: string;
   message: string;

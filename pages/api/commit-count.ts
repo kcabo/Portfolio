@@ -1,19 +1,23 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiResponse } from 'next';
+
 import { fetchCommitCount } from '@/lib/githubAPI';
-import { BadgeJsonSchema } from '@/lib/types';
+import { ShieldsIoCustomBadge } from '@/lib/types';
+import { nowYear } from '@/lib/dateUtil';
 
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<BadgeJsonSchema>
+  res: NextApiResponse<ShieldsIoCustomBadge>
 ) {
-  const year = 2021;
+  const year = nowYear();
+
   const commitCount = await fetchCommitCount(year);
-  const jsonSchema: BadgeJsonSchema = {
+
+  const badgeData: ShieldsIoCustomBadge = {
     schemaVersion: 1,
     label: `Commits in ${year}`,
     message: commitCount,
     color: '#0496FF',
     cacheSeconds: 3600,
   };
-  res.status(200).json(jsonSchema);
+
+  res.status(200).json(badgeData);
 }
