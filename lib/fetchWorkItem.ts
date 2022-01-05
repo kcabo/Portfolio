@@ -1,6 +1,5 @@
 import { client } from './client';
 import { WorkResponse } from './types';
-import formatRichText from './format';
 
 // プレビューモード時のみdraftKeyが与えられる
 // NOTE: contentIdが間違っていると404が返され、SDKからエラーが放たれる。
@@ -25,4 +24,9 @@ export default async function fetchWorkItem(
     console.error(error);
     return null;
   }
+}
+
+function formatRichText(html: string): string {
+  const gifWithoutQueryString = html.replace(/\.gif\?w=\d*&amp;h=\d*/g, '.gif');
+  return gifWithoutQueryString;
 }
