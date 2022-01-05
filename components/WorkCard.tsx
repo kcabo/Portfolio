@@ -1,14 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ExternalLinkIcon } from '@heroicons/react/solid';
+
 import Tag from './Tag';
 
 import { WorkResponse } from '@/lib/types';
 
 export default function WorkCard({ data }: { data: WorkResponse }) {
+  const url = `/works/${encodeURIComponent(data.id)}`;
+
   return (
     <div className='overflow-hidden transition bg-white rounded-lg shadow-lg lg:hover:-translate-y-2 '>
-      <Link href={`/works/${encodeURIComponent(data.id)}`}>
+      <Link href={url}>
         <a className='relative block w-full border-b border-gray-300 h-44'>
           <Image
             src={data.coverImage.url}
@@ -21,7 +24,7 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
 
       <div className='flex flex-col px-6 py-4'>
         <div className='flex items-end mb-1'>
-          <Link href={`/works/${encodeURIComponent(data.id)}`}>
+          <Link href={url}>
             <a className='mr-1'>
               <h3 className='text-lg font-medium leading-9 text-gray-600 md:text-xl md:leading-9'>
                 {data.title}
@@ -42,13 +45,15 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
             </Link>
           )}
         </div>
-        <Link href={`/works/${encodeURIComponent(data.id)}`}>
-          <a className='flex-grow block'>
+
+        <Link href={url}>
+          <a>
             <div className='mb-5 text-sm text-gray-500 md:text-base'>
               {data.description}
             </div>
           </a>
         </Link>
+
         <div className='flex flex-wrap gap-1.5'>
           {data.tags.map((tag, index) => (
             <Tag key={index} text={tag} />
