@@ -7,7 +7,7 @@ export default function About() {
     <div className='bg-white px-10 py-14 md:rounded-lg'>
       <div className='mx-auto max-w-xl'>
         <div className='relative mx-auto mb-8 h-60 w-60 overflow-hidden rounded-[37%63%30%70%/55%52%48%45%]'>
-          <Image src='/me.webp' layout='fill' objectFit='cover' alt='神崎伶央' />
+          <Image src='/me.webp' fill className='object-cover' alt='神崎伶央' />
         </div>
         <h1 className='mb-6 text-center text-2xl font-bold tracking-wider text-gray-600'>神崎 伶央</h1>
         <p className='mb-10 text-center text-lg text-gray-600'>

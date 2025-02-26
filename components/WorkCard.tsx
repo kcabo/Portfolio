@@ -12,7 +12,7 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
   return (
     <div className='overflow-hidden rounded-lg bg-white shadow-lg transition lg:hover:-translate-y-2'>
       <Link href={url} className='relative block h-44 w-full border-b border-gray-300'>
-        <Image src={data.coverImage.url} alt={data.title} layout='fill' objectFit='cover' />
+        <Image src={data.coverImage.url} alt={data.title} fill className='object-cover' />
       </Link>
 
       <div className='flex flex-col px-6 py-4'>
