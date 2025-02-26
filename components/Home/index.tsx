@@ -4,20 +4,16 @@ import SelectedWorks from '@/components/Home/SelectedWorks';
 
 import { Log, WorkResponse } from '@/lib/types';
 
-export default function Home({
-  logs,
-  selectedWorks,
-}: {
-  logs: Log[];
-  selectedWorks: WorkResponse[];
-}) {
+export default function Home({ logs, selectedWorks }: { logs: Log[]; selectedWorks: WorkResponse[] }) {
   return (
-    <div className='grid px-8 grid-cols-1 gap-10 md:grid-cols-[minmax(300px,400px)minmax(300px,1fr)]'>
-      <BusinessCard />
-      <Activities logs={logs} />
-      <div className='md:col-span-2'>
-        <SelectedWorks works={selectedWorks} />
+    <main className='container mx-auto min-h-[calc(100vh-150px-320px)] xl:max-w-screen-lg'>
+      <div className='grid grid-cols-1 gap-10 px-8 md:grid-cols-[minmax(300px,400px)minmax(300px,1fr)]'>
+        <BusinessCard />
+        <Activities logs={logs} />
+        <div className='md:col-span-2'>
+          <SelectedWorks works={selectedWorks} />
+        </div>
       </div>
-    </div>
+    </main>
   );
 }

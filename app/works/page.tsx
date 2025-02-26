@@ -1,38 +1,20 @@
-import Head from 'next/head';
-import {
-  baseUrl,
-  worksTitle as title,
-  worksDescription as description,
-} from '@/lib/metaData';
+import type { Metadata } from 'next';
 
 import Works from '@/components/Works';
-import Layout from '@/components/Layout';
-
 import fetchWorks from '@/lib/fetchWorks';
-import { WorkResponse } from '@/lib/types';
 
-export default function Page({ works }: { works: WorkResponse[] }) {
-  return (
-    <Layout>
-      <Head>
-        <title>{title}</title>
-        <meta property='og:title' content={title} />
-        <meta name='description' content={description} />
-        <meta property='og:description' content={description} />
-        <meta property='og:image' content={`${baseUrl}/OGP-top.webp`} />
-        <meta property='og:type' content='website' />
-        <meta property='og:url' content={`${baseUrl}/works`} />
-        <link rel='canonical' href={`${baseUrl}/works`} />
-      </Head>
-      <Works works={works} />
-    </Layout>
-  );
-}
+export const metadata: Metadata = {
+  title: 'Works | Reo Kanzaki',
+  description: 'これまでに開発したアプリ・ツールの一覧です。時系列順にしてあります。',
+  openGraph: {
+    title: 'Works | Reo Kanzaki',
+    description: 'これまでに開発したアプリ・ツールの一覧です。時系列順にしてあります。',
+    url: 'https://kcabo.vercel.app/works',
+  },
+};
 
-export async function getStaticProps() {
+export default async function Page() {
   const works = await fetchWorks();
 
-  return {
-    props: { works },
-  };
+  return <Works works={works} />;
 }

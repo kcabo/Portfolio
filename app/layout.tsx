@@ -37,12 +37,7 @@ export default function RootLayout({
     <html lang='ja'>
       <body className=''>
         <Header />
-        <main
-          // ヘッダーとフッター分の高さを引く
-          className='container mx-auto min-h-[calc(100vh-150px-320px)] xl:max-w-screen-lg'
-        >
-          {children}
-        </main>
+        {children}
         <Footer />
       </body>
     </html>
