@@ -8,33 +8,24 @@ type Props = {
   url: string;
 };
 
-export default function RichLinkButton({
-  icon,
-  mainText,
-  subText,
-  buttonType,
-  url,
-}: Props) {
+export default function RichLinkButton({ icon, mainText, subText, buttonType, url }: Props) {
   return (
-    <Link href={url}>
-      <a
-        className={
-          'flex rounded-lg shadow-lg w-[280px] hover:opacity-90  lg:w-full ' +
-          (buttonType == 'github'
-            ? 'text-gray-600 border border-gray-300 bg-white'
-            : 'text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff]')
-        }
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <div className='p-4'>{icon}</div>
-        <div className='flex flex-col justify-center'>
-          <div className='mb-2 font-medium leading-none'>{mainText}</div>
-          <div className='text-sm leading-none truncate w-52 opacity-80'>
-            {subText}
-          </div>
-        </div>
-      </a>
+    <Link
+      href={url}
+      className={
+        'flex w-[280px] rounded-lg shadow-lg hover:opacity-90 lg:w-full ' +
+        (buttonType == 'github'
+          ? 'border border-gray-300 bg-white text-gray-600'
+          : 'bg-gradient-to-r from-[#00c6ff] to-[#0072ff] text-white')
+      }
+      target='_blank'
+      rel='noopener noreferrer'
+    >
+      <div className='p-4'>{icon}</div>
+      <div className='flex flex-col justify-center'>
+        <div className='mb-2 leading-none font-medium'>{mainText}</div>
+        <div className='w-52 truncate text-sm leading-none opacity-80'>{subText}</div>
+      </div>
     </Link>
   );
 }

@@ -6,17 +6,15 @@ export default function Header() {
   return (
     <header className='pt-10 pb-6'>
       <div className='container mx-auto'>
-        <Link href='/'>
-          <a className='block w-6 mx-auto mb-1' aria-label='Go to top'>
-            <Logo width={24} />
-          </a>
+        <Link href='/' className='mx-auto mb-1 block w-6' aria-label='Go to top'>
+          <Logo width={24} />
         </Link>
-        <nav className='flex justify-center gap-6 mx-auto'>
-          <Link href='/works'>
-            <a className='p-3 text-lg font-bold text-gray-600'>Works</a>
+        <nav className='mx-auto flex justify-center gap-6'>
+          <Link href='/works' className='p-3 text-lg font-bold text-gray-600'>
+            Works
           </Link>
-          <Link href='/about'>
-            <a className='p-3 text-lg font-bold text-gray-600'>About</a>
+          <Link href='/about' className='p-3 text-lg font-bold text-gray-600'>
+            About
           </Link>
         </nav>
       </div>

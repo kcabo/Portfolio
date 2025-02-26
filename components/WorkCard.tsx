@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ExternalLinkIcon } from '@heroicons/react/solid';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid';
 
 import Tag from './Tag';
 
@@ -10,48 +10,32 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
   const url = `/works/${encodeURIComponent(data.id)}`;
 
   return (
-    <div className='overflow-hidden transition bg-white rounded-lg shadow-lg lg:hover:-translate-y-2 '>
-      <Link href={url}>
-        <a className='relative block w-full border-b border-gray-300 h-44'>
-          <Image
-            src={data.coverImage.url}
-            alt={data.title}
-            layout='fill'
-            objectFit='cover'
-          />
-        </a>
+    <div className='overflow-hidden rounded-lg bg-white shadow-lg transition lg:hover:-translate-y-2'>
+      <Link href={url} className='relative block h-44 w-full border-b border-gray-300'>
+        <Image src={data.coverImage.url} alt={data.title} layout='fill' objectFit='cover' />
       </Link>
 
       <div className='flex flex-col px-6 py-4'>
-        <div className='flex items-end mb-1'>
-          <Link href={url}>
-            <a className='mr-1'>
-              <h3 className='text-lg font-medium leading-9 text-gray-600 md:text-xl md:leading-9'>
-                {data.title}
-              </h3>
-            </a>
+        <div className='mb-1 flex items-end'>
+          <Link href={url} className='mr-1'>
+            <h3 className='text-lg leading-9 font-medium text-gray-600 md:text-xl md:leading-9'>{data.title}</h3>
           </Link>
 
           {data.links?.homepage && (
-            <Link href={data.links.homepage}>
-              <a
-                className='block p-2'
-                aria-label='Open homepage'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <ExternalLinkIcon className='w-5 h-5 text-gray-400 hover:text-gray-600' />
-              </a>
+            <Link
+              href={data.links.homepage}
+              className='block p-2'
+              aria-label='Open homepage'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <ArrowTopRightOnSquareIcon className='h-5 w-5 text-gray-400 hover:text-gray-600' />
             </Link>
           )}
         </div>
 
         <Link href={url}>
-          <a>
-            <div className='mb-5 text-sm text-gray-500 md:text-base'>
-              {data.description}
-            </div>
-          </a>
+          <div className='mb-5 text-sm text-gray-500 md:text-base'>{data.description}</div>
         </Link>
 
         <div className='flex flex-wrap gap-1.5'>
