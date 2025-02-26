@@ -1,27 +1,17 @@
-import Head from 'next/head';
-import {
-  baseUrl,
-  privacyTitle as title,
-  privacyDescription as description,
-} from '@/lib/metaData';
+import type { Metadata } from 'next';
 
 import Privacy from '@/components/Privacy';
-import Layout from '@/components/Layout';
+
+export const metadata: Metadata = {
+  title: 'プライバシーポリシー | Reo Kanzaki',
+  description: '当サイトのプライバシーポリシーについて',
+  openGraph: {
+    title: 'プライバシーポリシー | Reo Kanzaki',
+    description: '当サイトのプライバシーポリシーについて',
+    url: 'https://kcabo.vercel.app/privacy',
+  },
+};
 
 export default function Page() {
-  return (
-    <Layout>
-      <Head>
-        <title>{title}</title>
-        <meta property='og:title' content={title} />
-        <meta name='description' content={description} />
-        <meta property='og:description' content={description} />
-        <meta property='og:image' content={`${baseUrl}/OGP-top.webp`} />
-        <meta property='og:type' content='website' />
-        <meta property='og:url' content={`${baseUrl}/privacy`} />
-        <link rel='canonical' href={`${baseUrl}/privacy`} />
-      </Head>
-      <Privacy />
-    </Layout>
-  );
+  return <Privacy />;
 }
