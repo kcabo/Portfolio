@@ -1,4 +1,4 @@
-import { Github, Zenn } from '@icons-pack/react-simple-icons';
+import { SiGithub, SiZenn } from '@icons-pack/react-simple-icons';
 import Logo from '@/components/Logo';
 
 import { Log, LogCategory } from '@/lib/types';
@@ -6,15 +6,13 @@ import { Log, LogCategory } from '@/lib/types';
 export default function LogItem({ log }: { log: Log }) {
   return (
     <div className='py-2'>
-      <div className='flex items-end mb-1.5'>
+      <div className='mb-1.5 flex items-end'>
         <Icon category={log.category} />
-        <div className='mx-2 font-medium leading-none text-gray-600'>
-          {log.category}
-        </div>
+        <div className='mx-2 leading-none font-medium text-gray-600'>{log.category}</div>
         <div className='text-sm leading-none text-gray-500'>{log.date}</div>
       </div>
       <div
-        className='text-sm text-gray-600 lg:text-base colored-link'
+        className='colored-link text-sm text-gray-600 lg:text-base'
         dangerouslySetInnerHTML={{
           __html: log.body,
         }}
@@ -26,10 +24,10 @@ export default function LogItem({ log }: { log: Log }) {
 function Icon({ category }: { category: LogCategory }) {
   switch (category) {
     case 'GitHub':
-      return <Github color='#181717' size={16} />;
+      return <SiGithub color='#181717' size={16} />;
     case 'Portfolio':
       return <Logo width={15} />;
     case 'Zenn':
-      return <Zenn color='#3EA8FF' size={16} />;
+      return <SiZenn color='#3EA8FF' size={16} />;
   }
 }

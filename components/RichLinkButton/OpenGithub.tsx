@@ -1,5 +1,5 @@
 import RichLinkButton from './RichLinkButton';
-import { Github } from '@icons-pack/react-simple-icons';
+import { SiGithub } from '@icons-pack/react-simple-icons';
 import { useRepoDate } from '@/lib/githubAPI';
 
 export function OpenGithub({ url }: { url: string }) {
@@ -7,7 +7,7 @@ export function OpenGithub({ url }: { url: string }) {
 
   return (
     <RichLinkButton
-      icon={<Github size={40} />}
+      icon={<SiGithub size={40} />}
       mainText='View on Github'
       subText={`Last push: ${repoUpdateDate}`}
       buttonType='github'
