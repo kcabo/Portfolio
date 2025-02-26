@@ -80,8 +80,9 @@ function SocialLinks() {
         <SiFacebook size={36} color='#1877F2' />
       </a>
       <a href='https://www.linkedin.com/in/reo-kanzaki/' target='_blank' rel='noopener noreferrer'>
-        {/* <Linkedin size={36} color='#0A66C2' /> */}
-        <SiFacebook size={36} color='#1877F2' />
+        <div className='flex h-9 w-9 items-center justify-center rounded-sm bg-[#0A66C2]'>
+          <span className='text-2xl leading-none font-bold text-white'>in</span>
+        </div>
       </a>
     </div>
   );
