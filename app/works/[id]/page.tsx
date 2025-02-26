@@ -1,72 +1,49 @@
-import Head from 'next/head';
-import { baseUrl } from '@/lib/metaData';
+import type { Metadata } from 'next';
 
 import WorkItem from '@/components/WorkItem';
-import PreviewAlert from '@/components/PreviewAlert';
-import Layout from '@/components/Layout';
 
 import fetchWorkItem from '@/lib/fetchWorkItem';
 import { fetchWorksOnlyID } from '@/lib/fetchWorks';
-import { WorkResponse } from '@/lib/types';
 
-export default function Page({
-  work,
-  preview,
-}: {
-  work: WorkResponse;
-  preview: boolean;
-}) {
-  return (
-    <Layout>
-      <Head>
-        <title>{work.title + ' | Reo Kanzaki'}</title>
-        <meta name='description' content={work.description} />
-        <meta property='og:description' content={work.description} />
-        <meta property='og:title' content={work.title + ' | Reo Kanzaki'} />
-        <meta property='og:image' content={work.coverImage.url} />
-        <meta property='og:type' content='article' />
-        <meta property='og:url' content={`${baseUrl}/works/${work.id}`} />
-        <link rel='canonical' href={`${baseUrl}/works/${work.id}`} />
-      </Head>
-      {preview && <PreviewAlert />}
-      <WorkItem work={work} />
-    </Layout>
-  );
-}
-
-export async function getStaticPaths() {
-  const workIds = await fetchWorksOnlyID();
-
-  const paths = workIds.map(({ id }) => ({
-    params: { id: id },
-  }));
-
-  // ビルド時に生成されてないページ(公開前のプレビュー)を受けたら、都度SSRする
-  // ページが生成されるまでブロックする。router.isFallbackは使用したくない
-  return { paths, fallback: 'blocking' };
-}
-
-// NOTE: プレビューモード時でもフェッチは一回で十分ではないか？
-export async function getStaticProps({
-  params,
-  preview,
-  previewData,
-}: {
+type Props = {
   params: { id: string };
-  preview?: boolean; // プレビューモード時にtrue
-  previewData?: { id: string; draftKey: string };
-}) {
-  let work: WorkResponse | null;
+};
 
-  if (preview && previewData) {
-    work = await fetchWorkItem(previewData.id, previewData.draftKey);
-  } else {
-    work = await fetchWorkItem(params.id);
-  }
+export const dynamicParams = true; // 未生成パスも処理
+export const dynamic = 'auto'; // 必要に応じて動的処理（デフォルト）
 
-  if (work) {
-    return { props: { work, preview: preview ?? false } };
-  } else {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const work = await fetchWorkItem(id);
+
+  return {
+    title: work?.title + ' | Reo Kanzaki',
+    description: work?.description,
+    openGraph: {
+      title: work?.title + ' | Reo Kanzaki',
+      description: work?.description,
+      url: 'https://kcabo.vercel.app/works/' + work?.id,
+      images: [work?.coverImage.url || 'https://kcabo.vercel.app/OGP-top.webp'],
+      type: 'article',
+    },
+    twitter: {
+      images: [work?.coverImage.url || 'https://kcabo.vercel.app/OGP-top.webp'],
+    },
+  };
+}
+
+export async function generateStaticParams(): Promise<{ id: string }[]> {
+  const workIds = await fetchWorksOnlyID();
+  return workIds.map((work) => ({ id: work.id }));
+}
+
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const work = await fetchWorkItem(id);
+
+  if (!work) {
     return { notFound: true };
   }
+
+  return <WorkItem work={work} />;
 }

@@ -9,45 +9,50 @@ import { WorkResponse } from '@/lib/types';
 
 export default function WorkItem({ work }: { work: WorkResponse }) {
   return (
-    <div className='grid grid-cols-1 gap-10 md:px-8 lg:grid-cols-[1fr,300px]'>
-      <div className='bg-white pb-10 md:rounded-lg'>
-        <Image
-          src={work.coverImage.url}
-          alt={work.title}
-          width={work.coverImage.width}
-          height={work.coverImage.height}
-          className='w-full object-cover md:rounded-t-lg'
-        />
-        <div className='my-6 px-8 lg:px-12'>
-          <div className='mb-2 text-sm text-gray-600'>{work.date.text}</div>
-          <h1 className='mb-3 text-3xl font-bold text-gray-700 md:mb-4 md:text-4xl'>{work.title}</h1>
-          <div className='mb-4 text-gray-800'>{work.description}</div>
-          <div className='flex flex-wrap gap-2'>
-            {work.tags.map((tag, index) => (
-              <Tag key={index} text={tag} />
-            ))}
+    <main
+      // ヘッダーとフッター分の高さを引く
+      className='container mx-auto min-h-[calc(100vh-150px-320px)] 2xl:max-w-screen-xl'
+    >
+      <div className='grid grid-cols-1 gap-10 md:px-8 lg:grid-cols-[1fr_300px]'>
+        <div className='bg-white pb-10 md:rounded-lg'>
+          <Image
+            src={work.coverImage.url}
+            alt={work.title}
+            width={work.coverImage.width}
+            height={work.coverImage.height}
+            className='w-full object-cover md:rounded-t-lg'
+          />
+          <div className='my-6 px-8 lg:px-12'>
+            <div className='mb-2 text-sm text-gray-600'>{work.date.text}</div>
+            <h1 className='mb-3 text-3xl font-bold text-gray-700 md:mb-4 md:text-4xl'>{work.title}</h1>
+            <div className='mb-4 text-gray-800'>{work.description}</div>
+            <div className='flex flex-wrap gap-2'>
+              {work.tags.map((tag, index) => (
+                <Tag key={index} text={tag} />
+              ))}
+            </div>
           </div>
+          <div className='mb-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:hidden'>
+            {work.links?.homepage && <OpenHomepage url={work.links.homepage} />}
+            {work.links?.github && <OpenGithub url={work.links.github} />}
+          </div>
+          <article
+            dangerouslySetInnerHTML={{
+              __html: work.body,
+            }}
+            className={'colored-link ' + styles.article}
+            style={{ '--theme-color': work.themeColor } as any}
+          />
         </div>
-        <div className='mb-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:hidden'>
-          {work.links?.homepage && <OpenHomepage url={work.links.homepage} />}
-          {work.links?.github && <OpenGithub url={work.links.github} />}
+        <div className=''>
+          <div className='mb-10 hidden space-y-4 lg:block'>
+            {work.links?.homepage && <OpenHomepage url={work.links.homepage} />}
+            {work.links?.github && <OpenGithub url={work.links.github} />}
+          </div>
+          {work.relatedWorks.length > 0 && <RelatedWorks works={work.relatedWorks} />}
         </div>
-        <article
-          dangerouslySetInnerHTML={{
-            __html: work.body,
-          }}
-          className={'colored-link ' + styles.article}
-          style={{ '--theme-color': work.themeColor } as any}
-        />
       </div>
-      <div className=''>
-        <div className='mb-10 hidden space-y-4 lg:block'>
-          {work.links?.homepage && <OpenHomepage url={work.links.homepage} />}
-          {work.links?.github && <OpenGithub url={work.links.github} />}
-        </div>
-        {work.relatedWorks.length > 0 && <RelatedWorks works={work.relatedWorks} />}
-      </div>
-    </div>
+    </main>
   );
 }
 

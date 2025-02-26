@@ -1,5 +1,5 @@
 import RichLinkButton from './RichLinkButton';
-import { LinkIcon } from '@heroicons/react/solid';
+import { LinkIcon } from '@heroicons/react/20/solid';
 
 export function OpenHomepage({ url }: { url: string }) {
   return (

@@ -1,3 +1,5 @@
+@reference "./globals.css";
+
 .article {
   @apply px-6 leading-loose text-gray-800 md:px-8 lg:px-12;
 }

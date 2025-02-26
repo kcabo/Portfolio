@@ -1,3 +1,5 @@
+'use client';
+
 import { Octokit } from '@octokit/core';
 import { toDate } from '@/lib/dateUtil';
 import useSWR from 'swr';
@@ -12,9 +14,7 @@ export async function fetchLatestPushDate() {
     });
 
     // Eventの配列のうち、一番最初のPushEventが最新のもの
-    const latestPush = response.data.find(
-      (event) => event.type === 'PushEvent'
-    );
+    const latestPush = response.data.find((event) => event.type === 'PushEvent');
     if (!latestPush) throw new Error('Push Event not found');
 
     const dateString = latestPush?.created_at;
@@ -37,11 +37,10 @@ export async function fetchCommitCount(year: number) {
           }
         }
       }`,
-      { startFrom: `${year}-01-01T00:00:00Z` }
+      { startFrom: `${year}-01-01T00:00:00Z` },
     );
 
-    const totalCommit =
-      response?.viewer.contributionsCollection.totalCommitContributions;
+    const totalCommit = response?.viewer.contributionsCollection.totalCommitContributions;
 
     if (!totalCommit) throw new Error('Response has no payload');
 
