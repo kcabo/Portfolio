@@ -17,10 +17,11 @@ export default function About() {
         </p>
         <SocialLinks />
         <div className='md:h-52'>
-          <img
+          <Image
             src='https://raw.githubusercontent.com/kcabo/kcabo/main/github-metrics.svg'
             alt='Contributions Calendar'
             className='mx-auto'
+            unoptimized
           />
         </div>
         <div className='space-y-10'>
@@ -37,12 +38,13 @@ export default function About() {
             <Caption text='Hobbies' />
             <p>
               水泳・スキー・サウナ・エヴァ
-              <img
+              <Image
                 src='https://abs.twimg.com/hashflags/Amazon_EVANGELION_July_2021/Amazon_EVANGELION_July_2021.png'
                 alt='初号機'
                 width={20}
                 height={20}
                 className='ml-1 inline-block'
+                unoptimized
               />
             </p>
           </div>
@@ -88,56 +90,56 @@ function SocialLinks() {
 function Badges() {
   return (
     <div className='flex flex-wrap gap-1'>
-      <img
+      <Image
         src='https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat'
         alt='TypeScript'
       />
-      <img src='https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=flat' alt='Python' />
-      <img
+      <Image src='https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=flat' alt='Python' />
+      <Image
         src='https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat'
         alt='JavaScript'
       />
-      <img src='https://img.shields.io/badge/VBA-217346?logo=microsoftexcel&logoColor=fff&style=flat' alt='VBA' />
-      <img src='https://img.shields.io/badge/GAS-34A853?logo=googlesheets&logoColor=fff&style=flat' alt='GAS' />
-      <img src='https://img.shields.io/badge/Vue.js-4FC08D?logo=vuedotjs&logoColor=fff&style=flat' alt='Vue.js' />
-      <img src='https://img.shields.io/badge/Svelte-FF3E00?logo=svelte&logoColor=fff&style=flat' alt='Svelte' />
-      <img src='https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat' alt='React' />
-      <img src='https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff&style=flat' alt='Next.js' />
-      <img src='https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff&style=flat' alt='Vite' />
-      <img
+      <Image src='https://img.shields.io/badge/VBA-217346?logo=microsoftexcel&logoColor=fff&style=flat' alt='VBA' />
+      <Image src='https://img.shields.io/badge/GAS-34A853?logo=googlesheets&logoColor=fff&style=flat' alt='GAS' />
+      <Image src='https://img.shields.io/badge/Vue.js-4FC08D?logo=vuedotjs&logoColor=fff&style=flat' alt='Vue.js' />
+      <Image src='https://img.shields.io/badge/Svelte-FF3E00?logo=svelte&logoColor=fff&style=flat' alt='Svelte' />
+      <Image src='https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat' alt='React' />
+      <Image src='https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff&style=flat' alt='Next.js' />
+      <Image src='https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff&style=flat' alt='Vite' />
+      <Image
         src='https://img.shields.io/badge/Tailwind%20CSS-38B2AC?logo=tailwindcss&logoColor=fff&style=flat'
         alt='Tailwind CSS'
       />
-      <img src='https://img.shields.io/badge/Flask-000?logo=flask&logoColor=fff&style=flat' alt='Flask' />
-      <img
+      <Image src='https://img.shields.io/badge/Flask-000?logo=flask&logoColor=fff&style=flat' alt='Flask' />
+      <Image
         src='https://img.shields.io/badge/Puppeteer-40B5A4?logo=puppeteer&logoColor=fff&style=flat'
         alt='Puppeteer'
       />
-      <img
+      <Image
         src='https://img.shields.io/badge/Serverless-FD5750?logo=serverless&logoColor=fff&style=flat'
         alt='Serverless'
       />
-      <img src='https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=fff&style=flat' alt='Redis' />
-      <img
+      <Image src='https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=fff&style=flat' alt='Redis' />
+      <Image
         src='https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=fff&style=flat'
         alt='PostgreSQL'
       />
-      <img
+      <Image
         src='https://img.shields.io/badge/DynamoDB-4053D6?logo=amazondynamodb&logoColor=fff&style=flat'
         alt='DynamoDB'
       />
-      <img src='https://img.shields.io/badge/S3-569A31?logo=amazons3&logoColor=fff&style=flat' alt='S3' />
-      <img src='https://img.shields.io/badge/LINE%20API-00C300?logo=line&logoColor=fff&style=flat' alt='LINE API' />
-      <img src='https://img.shields.io/badge/Vercel-000?logo=vercel&logoColor=fff&style=flat' alt='Vercel' />
-      <img src='https://img.shields.io/badge/Heroku-430098?logo=heroku&logoColor=fff&style=flat' alt='Heroku' />
-      <img src='https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=fff&style=flat' alt='AWS' />
-      <img src='https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=flat' alt='Docker' />
-      <img
+      <Image src='https://img.shields.io/badge/S3-569A31?logo=amazons3&logoColor=fff&style=flat' alt='S3' />
+      <Image src='https://img.shields.io/badge/LINE%20API-00C300?logo=line&logoColor=fff&style=flat' alt='LINE API' />
+      <Image src='https://img.shields.io/badge/Vercel-000?logo=vercel&logoColor=fff&style=flat' alt='Vercel' />
+      <Image src='https://img.shields.io/badge/Heroku-430098?logo=heroku&logoColor=fff&style=flat' alt='Heroku' />
+      <Image src='https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=fff&style=flat' alt='AWS' />
+      <Image src='https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=flat' alt='Docker' />
+      <Image
         src='https://img.shields.io/badge/VS%20Code-007ACC?logo=visualstudiocode&logoColor=fff&style=flat'
         alt='VS Code'
       />
-      <img src='https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=fff&style=flat' alt='Figma' />
-      <img src='https://img.shields.io/badge/Ubuntu-E95420?logo=ubuntu&logoColor=fff&style=flat' alt='Ubuntu' />
+      <Image src='https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=fff&style=flat' alt='Figma' />
+      <Image src='https://img.shields.io/badge/Ubuntu-E95420?logo=ubuntu&logoColor=fff&style=flat' alt='Ubuntu' />
     </div>
   );
 }
