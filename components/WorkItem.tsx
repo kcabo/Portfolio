@@ -41,7 +41,7 @@ export default function WorkItem({ work }: { work: WorkResponse }) {
               __html: work.body,
             }}
             className={'colored-link ' + styles.article}
-            style={{ '--theme-color': work.themeColor } as any}
+            style={{ '--theme-color': work.themeColor } as React.CSSProperties}
           />
         </div>
         <div className=''>

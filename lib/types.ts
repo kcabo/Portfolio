@@ -89,3 +89,11 @@ export type ShieldsIoCustomBadge = {
   color: string;
   cacheSeconds: number;
 };
+
+export type ContributionsResponse = {
+  viewer: {
+    contributionsCollection: {
+      totalCommitContributions: number;
+    };
+  };
+};

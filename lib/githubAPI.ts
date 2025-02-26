@@ -1,5 +1,6 @@
 import { Octokit } from '@octokit/core';
 import { toDate } from '@/lib/dateUtil';
+import { ContributionsResponse } from '@/lib/types';
 
 const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN || '';
 const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN });
@@ -26,7 +27,7 @@ export async function fetchLatestPushDate() {
 
 export async function fetchCommitCount(year: number) {
   try {
-    const response: any = await octokit.graphql(
+    const response = await octokit.graphql<ContributionsResponse>(
       `query ($startFrom: DateTime!) {
         viewer {
           contributionsCollection(from: $startFrom) {
@@ -37,7 +38,7 @@ export async function fetchCommitCount(year: number) {
       { startFrom: `${year}-01-01T00:00:00Z` },
     );
 
-    const totalCommit = response?.viewer.contributionsCollection.totalCommitContributions;
+    const totalCommit = response.viewer.contributionsCollection.totalCommitContributions;
 
     if (!totalCommit) throw new Error('Response has no payload');
 
