@@ -8,14 +8,14 @@ export default function Activities({ logs }: { logs: Log[] }) {
   return (
     <div className=''>
       <HomeCaption caption='Recent Activities' allLink='/logs' />
-      <div className='md:h-[184px] lg:h-[207.21px] px-5 py-3 bg-white rounded-lg shadow-lg overflow-y-auto'>
+      <div className='overflow-y-auto rounded-lg bg-white px-5 py-3 shadow-lg md:h-[184px] lg:h-[207.21px]'>
         {logs
           .filter((log) => log.showOnTop)
           .map((log, index) => (
             <LogItem key={index} log={log} />
           ))}
       </div>
-      <style jsx>{`
+      {/* <style jsx>{`
         div::-webkit-scrollbar {
           width: 6px;
         }
@@ -23,7 +23,7 @@ export default function Activities({ logs }: { logs: Log[] }) {
           border-radius: 5px;
           background: #d1d5db;
         }
-      `}</style>
+      `}</style> */}
     </div>
   );
 }
