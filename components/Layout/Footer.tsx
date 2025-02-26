@@ -16,7 +16,7 @@ export default function Footer() {
           <a href='https://github.com/kcabo/Portfolio/blob/main/CREDITS.json'>Credits</a>
         </nav>
         <div className='mt-12 mb-8 h-px w-full bg-white opacity-30'></div>
-        <div className='mb-2 text-center text-sm'>© 2021 Reo Kanzaki</div>
+        <div className='mb-2 text-center text-sm'>© 2025 Reo Kanzaki</div>
         <div className='text-center text-sm'>
           The source code of this blog is available at{' '}
           <a href='https://github.com/kcabo/Portfolio' className='underline' target='_blank' rel='noopener noreferrer'>
