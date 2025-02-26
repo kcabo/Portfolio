@@ -9,8 +9,8 @@ type Props = {
   params: Promise<{ id: string }>;
 };
 
-export const dynamicParams = true; // 未生成パスも処理
-export const dynamic = 'auto'; // 必要に応じて動的処理（デフォルト）
+export const dynamicParams = false;
+export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
