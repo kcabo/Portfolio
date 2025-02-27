@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className='mt-20 bg-gray-800 py-12'>
-      <div className='container mx-auto px-8 text-gray-400 xl:max-w-screen-lg'>
+    <footer className='mt-20 bg-gray-800 pt-12 pb-8'>
+      <div className='mx-auto text-gray-300'>
         <nav className='flex flex-col justify-center gap-5 text-center md:flex-row'>
           <Link href='/works'>Works</Link>
           <div className='hidden font-bold opacity-80 md:block'>・</div>

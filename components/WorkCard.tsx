@@ -18,24 +18,24 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
       <div className='flex flex-col px-6 py-4'>
         <div className='mb-1 flex items-end'>
           <Link href={url} className='mr-1'>
-            <h3 className='text-lg leading-9 font-medium text-gray-600 md:text-xl md:leading-9'>{data.title}</h3>
+            <h3 className='text-lg leading-9 font-bold md:text-xl md:leading-9'>{data.title}</h3>
           </Link>
 
           {data.links?.homepage && (
             <Link
               href={data.links.homepage}
-              className='block p-2'
+              className='block p-1.5'
               aria-label='Open homepage'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <ArrowTopRightOnSquareIcon className='h-5 w-5 text-gray-400 hover:text-gray-600' />
+              <ArrowTopRightOnSquareIcon className='size-5 text-[#126de3] hover:text-gray-600' />
             </Link>
           )}
         </div>
 
         <Link href={url}>
-          <div className='mb-5 text-sm text-gray-500 md:text-base'>{data.description}</div>
+          <div className='mb-5 text-sm text-gray-600 md:text-base'>{data.description}</div>
         </Link>
 
         <div className='flex flex-wrap gap-1.5'>

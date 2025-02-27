@@ -1,28 +1,30 @@
 @reference "./globals.css";
 
 .article {
-  @apply px-6 leading-loose text-gray-800 md:px-8 lg:px-12;
+  @apply px-6 leading-loose text-black md:px-8 lg:px-12;
 }
 
 .article p,
 .article pre,
+.article ul,
+.article ou,
 .article blockquote {
   @apply mb-2;
 }
 
 .article img {
   @apply w-auto mx-auto my-8;
-  max-height: 800px;
+  max-height: 400px;
 }
 
 .article h2 {
-  @apply relative pt-6 mt-12 mb-6 text-3xl font-bold text-gray-700;
+  @apply relative pt-4 mt-12 mb-3 text-2xl font-bold text-gray-900;
 }
 
 .article h2::before {
   position: absolute;
   content: '';
-  width: 36px;
+  width: 32px;
   height: 4px;
   border-radius: 4px;
   background: var(--theme-color);
@@ -31,15 +33,15 @@
 }
 
 .article h3 {
-  @apply mt-6 mb-4 text-xl font-bold text-gray-700;
+  @apply mt-8 mb-4 text-xl font-bold;
 }
 
 .article h4 {
-  @apply mt-5 mb-2 text-lg font-bold;
+  @apply mt-6 mb-2 text-lg font-bold;
 }
 
 .article ul {
-  @apply pl-6 list-disc;
+  @apply pl-7 list-disc;
 }
 
 .article li::marker {
@@ -47,7 +49,7 @@
 }
 
 .article ol {
-  @apply pl-6 list-decimal;
+  @apply pl-7 list-decimal;
 }
 
 .article u {
@@ -69,5 +71,5 @@
 }
 
 .article blockquote {
-  @apply py-3 pl-4 pr-1 text-gray-600 border-l-4 border-gray-500 bg-gray-50;
+  @apply my-2 py-1 pl-4 pr-1 text-gray-500 border-l-2 border-gray-500 bg-gray-50 leading-normal;
 }

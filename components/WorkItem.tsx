@@ -21,8 +21,8 @@ export default function WorkItem({ work }: { work: WorkResponse }) {
           />
           <div className='my-6 px-8 lg:px-12'>
             <div className='mb-2 text-sm text-gray-600'>{work.date.text}</div>
-            <h1 className='mb-3 text-3xl font-bold text-gray-700 md:mb-4 md:text-4xl'>{work.title}</h1>
-            <div className='mb-4 text-gray-800'>{work.description}</div>
+            <h1 className='mb-3 text-3xl font-bold md:mb-4 md:text-4xl'>{work.title}</h1>
+            <div className='mb-4'>{work.description}</div>
             <div className='flex flex-wrap gap-2'>
               {work.tags.map((tag, index) => (
                 <Tag key={index} text={tag} />
@@ -56,7 +56,7 @@ export default function WorkItem({ work }: { work: WorkResponse }) {
 function RelatedWorks({ works }: { works: WorkResponse[] }) {
   return (
     <div className='px-6 md:p-0'>
-      <h2 className='mb-6 text-2xl font-bold text-gray-600'>関連する作品</h2>
+      <h2 className='mb-6 text-2xl font-bold text-gray-600'>関連Works</h2>
       <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-1'>
         {works.map((work, index) => (
           <WorkCard key={index} data={work} />

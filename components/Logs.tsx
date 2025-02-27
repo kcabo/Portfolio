@@ -5,10 +5,7 @@ import { Log } from '@/lib/types';
 
 export default function Logs({ logs }: { logs: Log[] }) {
   return (
-    <main
-      // ヘッダーとフッター分の高さを引く
-      className='container mx-auto min-h-[calc(100vh-150px-320px)] xl:max-w-screen-lg'
-    >
+    <main className='container mx-auto xl:max-w-screen-lg'>
       <div className='bg-white p-10 md:rounded-lg'>
         <PageTitle
           title='Logs'
