@@ -1,13 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextResponse } from 'next/server';
 
 import { fetchCommitCount } from '@/lib/githubAPI';
 import { ShieldsIoCustomBadge } from '@/lib/types';
 import { nowYear } from '@/lib/dateUtil';
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<ShieldsIoCustomBadge>
-) {
+export async function GET() {
   const year = nowYear();
 
   const commitCount = await fetchCommitCount(year);
@@ -20,5 +17,5 @@ export default async function handler(
     cacheSeconds: 3600,
   };
 
-  res.status(200).json(badgeData);
+  return NextResponse.json(badgeData);
 }
