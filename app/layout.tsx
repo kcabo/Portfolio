@@ -1,4 +1,7 @@
 import type { Metadata, Viewport } from 'next';
+import { GoogleAnalytics } from '@next/third-parties/google';
+
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 
 import Footer from '@/components/Layout/Footer';
 import Header from '@/components/Layout/Header';
@@ -48,6 +51,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <GoogleAnalytics gaId={GA_TRACKING_ID} />
     </html>
   );
 }
