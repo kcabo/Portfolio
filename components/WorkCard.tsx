@@ -29,7 +29,7 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <ArrowTopRightOnSquareIcon className='size-5 text-[#126de3] hover:text-gray-600' />
+              <ArrowTopRightOnSquareIcon className='size-5 text-blue-600 hover:text-gray-600' />
             </Link>
           )}
         </div>

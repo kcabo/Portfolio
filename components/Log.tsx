@@ -12,7 +12,7 @@ export default function LogItem({ log }: { log: Log }) {
         <div className='text-sm leading-none text-gray-500'>{log.date}</div>
       </div>
       <div
-        className='colored-link text-sm text-gray-600 lg:text-base'
+        className='colored-link line-clamp-1 text-sm text-gray-600 lg:text-base'
         dangerouslySetInnerHTML={{
           __html: log.body,
         }}

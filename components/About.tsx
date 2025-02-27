@@ -19,14 +19,9 @@ export default function About() {
             </p>
             <p className='mt-2'>パフォーマンスとスケーラビリティを重視したアプリケーション開発が得意です。</p>
             <p className='mt-2'>開発実績多数。スタートアップ企業からの受注経験あり。</p>
-            <p className='mt-2'>
+            <p className='colored-link mt-2'>
               ご連絡は
-              <a
-                href='https://www.linkedin.com/in/reo-kanzaki/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-[#126de3] hover:underline'
-              >
+              <a href='https://www.linkedin.com/in/reo-kanzaki/' target='_blank' rel='noopener noreferrer'>
                 LinkedIn
               </a>
               からお願いします。
@@ -37,7 +32,6 @@ export default function About() {
           <div className='my-4'>
             <Image
               src='https://github-contributions-api.deno.dev/kcabo.svg?no-total=true&no-legend=true&scheme=random'
-              // src='https://raw.githubusercontent.com/kcabo/kcabo/main/github-metrics.svg'
               alt='Contributions Calendar'
               className='mx-auto w-auto'
               width={0}

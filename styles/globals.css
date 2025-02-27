@@ -11,3 +11,8 @@ body {
 .colored-link a:hover {
   text-decoration: underline;
 }
+
+.thin-scroll {
+  scrollbar-width: thin; 
+  scrollbar-color: #eef transparent;
+}
