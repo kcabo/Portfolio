@@ -18,7 +18,7 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
       <div className='flex flex-col px-6 py-4'>
         <div className='mb-1 flex items-end'>
           <Link href={url} className='mr-1'>
-            <h3 className='text-lg leading-9 font-bold md:text-xl md:leading-9'>{data.title}</h3>
+            <h3 className='text-lg leading-9 md:text-xl md:leading-9'>{data.title}</h3>
           </Link>
 
           {data.links?.homepage && (

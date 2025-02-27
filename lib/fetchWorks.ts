@@ -19,7 +19,7 @@ export default async function fetchWorks() {
 export async function fetchWorksOnlyID() {
   const response = await client.get<IDListResponse>({
     endpoint: 'works',
-    queries: { fields: 'id', orders: '-date.numeral' },
+    queries: { fields: 'id', orders: '-date.numeral', limit: 30 },
   });
 
   const ids = response.contents;

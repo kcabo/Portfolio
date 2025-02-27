@@ -5,7 +5,7 @@ import { toDate } from './dateUtil';
 export default async function fetchLogs() {
   const response = await client.get<LogListResponse>({
     endpoint: 'logs',
-    queries: { orders: '-date' },
+    queries: { orders: '-date', limit: 30 },
   });
 
   const logs = formatData(response);
