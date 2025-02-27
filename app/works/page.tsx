@@ -4,11 +4,11 @@ import Works from '@/components/Works';
 import fetchWorks from '@/lib/fetchWorks';
 
 export const metadata: Metadata = {
-  title: 'Works | Reo Kanzaki',
-  description: 'これまでに開発したアプリ・ツールの一覧です。時系列順にしてあります。',
+  title: 'Works',
+  description: 'これまで開発したアプリの一覧',
   openGraph: {
-    title: 'Works | Reo Kanzaki',
-    description: 'これまでに開発したアプリ・ツールの一覧です。時系列順にしてあります。',
+    title: 'Works',
+    description: 'これまで開発したアプリの一覧',
     url: 'https://kcabo.vercel.app/works',
   },
 };

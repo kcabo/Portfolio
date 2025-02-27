@@ -9,10 +9,7 @@ import { WorkResponse } from '@/lib/types';
 
 export default function WorkItem({ work }: { work: WorkResponse }) {
   return (
-    <main
-      // ヘッダーとフッター分の高さを引く
-      className='container mx-auto min-h-[calc(100vh-150px-320px)] 2xl:max-w-screen-xl'
-    >
+    <main className='container mx-auto 2xl:max-w-screen-xl'>
       <div className='grid grid-cols-1 gap-10 md:px-8 lg:grid-cols-[1fr_300px]'>
         <div className='bg-white pb-10 md:rounded-lg'>
           <Image

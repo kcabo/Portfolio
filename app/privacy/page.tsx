@@ -3,11 +3,11 @@ import type { Metadata } from 'next';
 import Privacy from '@/components/Privacy';
 
 export const metadata: Metadata = {
-  title: 'プライバシーポリシー | Reo Kanzaki',
-  description: '当サイトのプライバシーポリシーについて',
+  title: 'プライバシーポリシー',
+  description: '当サイトではGoogleアナリティクスを使用しています。',
   openGraph: {
-    title: 'プライバシーポリシー | Reo Kanzaki',
-    description: '当サイトのプライバシーポリシーについて',
+    title: 'プライバシーポリシー',
+    description: '当サイトではGoogleアナリティクスを使用しています。',
     url: 'https://kcabo.vercel.app/privacy',
   },
 };

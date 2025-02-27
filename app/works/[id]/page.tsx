@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 
 import WorkItem from '@/components/WorkItem';
-
 import fetchWorkItem from '@/lib/fetchWorkItem';
 import { fetchWorksOnlyID } from '@/lib/fetchWorks';
 
@@ -18,23 +17,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!work) {
     return {
-      title: 'ページが見つかりません | Reo Kanzaki',
+      title: 'ページが見つかりません',
       description: 'お探しのページは存在しません。',
     };
   }
 
   return {
-    title: `${work.title} | Reo Kanzaki`,
+    title: work.title,
     description: work.description,
     openGraph: {
-      title: `${work.title} | Reo Kanzaki`,
+      title: work.title,
       description: work.description,
       url: `https://kcabo.vercel.app/works/${work.id}`,
-      images: [work.coverImage.url || 'https://kcabo.vercel.app/OGP-top.webp'],
+      images: [work.coverImage.url],
       type: 'article',
     },
     twitter: {
-      images: [work.coverImage.url || 'https://kcabo.vercel.app/OGP-top.webp'],
+      images: [work.coverImage.url],
     },
   };
 }

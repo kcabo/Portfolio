@@ -8,13 +8,17 @@ export default function Badges() {
       <Image
         alt='Commit Count'
         src={`https://img.shields.io/endpoint?url=https%3A%2F%2F${BADGE_ENDPOINT}%2Fapi%2Fcommit-count`}
-        height={20}
+        className='h-6 w-auto'
+        height={0}
+        width={0}
         unoptimized
       />
       <Image
         alt='Last commit'
         src={`https://img.shields.io/endpoint?url=https%3A%2F%2F${BADGE_ENDPOINT}%2Fapi%2Flast-commit`}
-        height={20}
+        className='h-6 w-auto'
+        height={0}
+        width={0}
         unoptimized
       />
     </div>
