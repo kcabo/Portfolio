@@ -5,20 +5,20 @@ import { SiGithub, SiFacebook, SiZenn } from '@icons-pack/react-simple-icons';
 export default function About() {
   return (
     <main className='container mx-auto xl:max-w-screen-lg'>
-      <div className='bg-white px-8 py-14 md:rounded-lg'>
+      <div className='bg-white px-6 py-10 md:rounded-lg lg:px-8'>
         <div className='mx-auto max-w-2xl'>
-          <div className='relative mx-auto mb-8 h-60 w-60 overflow-hidden rounded-[37%63%30%70%/55%52%48%45%]'>
-            <Image src='/me.webp' fill className='object-cover' alt='神崎伶央' />
+          <div className='relative mx-auto mb-6 h-80 w-80 overflow-hidden rounded-full'>
+            <Image src='/me.avif' fill className='object-cover object-[100%_25%]' alt='神崎伶央' />
           </div>
           <h1 className='mb-6 text-center text-2xl font-bold tracking-wider text-gray-600'>Reo Kanzaki / 神崎 伶央</h1>
           <div className='mb-8 text-left text-lg text-gray-600 md:text-center'>
             <p className=''>
-              プロダクト設計・UIデザインから、フロントエンド、バックエンド、
+              プロダクト設計・UIデザインから、フロントエンド開発・バックエンド開発・
               <br className='hidden md:inline' />
-              クラウドインフラの設計・開発まで、Webアプリ開発に幅広く対応可能です。
+              クラウドインフラ設計まで、Web分野に幅広く対応可能です。
             </p>
             <p className='mt-2'>パフォーマンスとスケーラビリティを重視したアプリケーション開発が得意です。</p>
-            <p className='mt-2'>開発実績多数。スタートアップ企業からの受注経験あり。</p>
+            <p className='mt-2'>スタートアップ企業からの受注実績もあります。</p>
             <p className='colored-link mt-2'>
               ご連絡は
               <a href='https://www.linkedin.com/in/reo-kanzaki/' target='_blank' rel='noopener noreferrer'>
@@ -26,28 +26,29 @@ export default function About() {
               </a>
               からお願いします。
             </p>
-            <p className='mt-2'>泳げます。遅いです。</p>
+            <p className='mt-2'>元水泳部です。速くはないです。</p>
           </div>
           <SocialLinks />
-          <div className='my-4'>
-            <Image
-              src='https://github-contributions-api.deno.dev/kcabo.svg?no-total=true&no-legend=true&scheme=random'
-              alt='Contributions Calendar'
-              className='mx-auto w-auto'
-              width={0}
-              height={0}
-              unoptimized
-            />
-          </div>
-          <div className='space-y-10'>
+          <div className='mt-10 space-y-8'>
+            <div>
+              <Caption text='Contributions' />
+              <Image
+                src='https://github-contributions-api.deno.dev/kcabo.svg?no-total=true&no-legend=true&scheme=random'
+                alt='Contributions Calendar'
+                className='mx-auto w-auto'
+                width={0}
+                height={0}
+                unoptimized
+              />
+            </div>
             <div>
               <Caption text='Skills' />
-              <p className='pb-2 text-sm text-gray-500'>開発経験のある言語・フレームワーク・ツールなど</p>
+              <p className='pb-2 text-gray-600'>開発経験のある言語・フレームワーク・ツールなど</p>
               <Badges />
             </div>
             <div>
               <Caption text='Qualifications' />
-              <ul className='list-disc pl-6'>
+              <ul className='list-disc pl-6 text-gray-600'>
                 <li>基本情報処理技術者</li>
                 <li>応用情報処理技術者</li>
                 <li>情報処理安全確保支援士</li>
@@ -56,20 +57,10 @@ export default function About() {
             </div>
             <div>
               <Caption text='Hobbies' />
-              <ul className='list-disc pl-6'>
+              <ul className='list-disc pl-6 text-gray-600'>
+                <li>ドライブ</li>
                 <li>競技麻雀</li>
                 <li>スキー</li>
-                <li>
-                  エヴァ
-                  <Image
-                    src='https://abs.twimg.com/hashflags/Amazon_EVANGELION_July_2021/Amazon_EVANGELION_July_2021.png'
-                    alt='初号機'
-                    width={20}
-                    height={20}
-                    className='ml-1 inline-block'
-                    unoptimized
-                  />
-                </li>
               </ul>
             </div>
           </div>

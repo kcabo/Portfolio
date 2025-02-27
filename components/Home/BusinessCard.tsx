@@ -12,7 +12,7 @@ export default function BusinessCard() {
         <Badges />
       </div>
       <div className='relative w-[38.3%]'>
-        <Image src='/me.webp' alt='神崎伶央' fill className='object-cover' />
+        <Image src='/me.avif' alt='神崎伶央' fill className='object-cover' />
       </div>
     </div>
   );
