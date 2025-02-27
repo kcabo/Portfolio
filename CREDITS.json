@@ -1,68 +1,68 @@
 {
-    "@heroicons/react": {
-        "licenses": "MIT",
-        "repository": "https://github.com/tailwindlabs/heroicons",
-        "licenseUrl": "https://github.com/tailwindlabs/heroicons",
-        "parents": "portfolio"
-    },
-    "@icons-pack/react-simple-icons": {
-        "licenses": "MIT",
-        "repository": "https://github.com/icons-pack/react-simple-icons",
-        "licenseUrl": "https://github.com/icons-pack/react-simple-icons/raw/master/LICENSE",
-        "parents": "portfolio"
-    },
-    "@octokit/core": {
-        "licenses": "MIT",
-        "repository": "github:octokit/core.js",
-        "licenseUrl": "github:octokit/core.js",
-        "parents": "portfolio"
-    },
-    "dayjs": {
-        "licenses": "MIT",
-        "repository": "https://github.com/iamkun/dayjs",
-        "licenseUrl": "https://github.com/iamkun/dayjs/raw/master/LICENSE",
-        "parents": "portfolio"
-    },
-    "microcms-js-sdk": {
-        "licenses": "Apache-2.0",
-        "repository": "https://github.com/microcmsio/microcms-js-sdk",
-        "licenseUrl": "https://github.com/microcmsio/microcms-js-sdk/raw/master/LICENSE",
-        "parents": "portfolio"
-    },
-    "next-pwa": {
-        "licenses": "MIT",
-        "repository": "https://github.com/shadowwalker/next-pwa",
-        "licenseUrl": "https://github.com/shadowwalker/next-pwa/raw/master/LICENSE",
-        "parents": "portfolio"
-    },
-    "next": {
-        "licenses": "MIT",
-        "repository": "https://github.com/vercel/next.js",
-        "licenseUrl": "https://github.com/vercel/next.js/raw/master/license.md",
-        "parents": "portfolio"
-    },
-    "react-dom": {
-        "licenses": "MIT",
-        "repository": "https://github.com/facebook/react",
-        "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
-        "parents": "portfolio"
-    },
-    "react": {
-        "licenses": "MIT",
-        "repository": "https://github.com/facebook/react",
-        "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
-        "parents": "portfolio"
-    },
-    "sharp": {
-        "licenses": "Apache-2.0",
-        "repository": "https://github.com/lovell/sharp",
-        "licenseUrl": "https://github.com/lovell/sharp/raw/master/LICENSE",
-        "parents": "portfolio"
-    },
-    "swr": {
-        "licenses": "MIT",
-        "repository": "https://github.com/vercel/swr",
-        "licenseUrl": "https://github.com/vercel/swr/raw/master/LICENSE",
-        "parents": "portfolio"
-    }
+  "@heroicons/react": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tailwindlabs/heroicons",
+    "licenseUrl": "https://github.com/tailwindlabs/heroicons",
+    "parents": "portfolio"
+  },
+  "@icons-pack/react-simple-icons": {
+    "licenses": "MIT",
+    "repository": "https://github.com/icons-pack/react-simple-icons",
+    "licenseUrl": "https://github.com/icons-pack/react-simple-icons/raw/master/LICENSE",
+    "parents": "portfolio"
+  },
+  "@octokit/core": {
+    "licenses": "MIT",
+    "repository": "github:octokit/core.js",
+    "licenseUrl": "github:octokit/core.js",
+    "parents": "portfolio"
+  },
+  "dayjs": {
+    "licenses": "MIT",
+    "repository": "https://github.com/iamkun/dayjs",
+    "licenseUrl": "https://github.com/iamkun/dayjs/raw/master/LICENSE",
+    "parents": "portfolio"
+  },
+  "microcms-js-sdk": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/microcmsio/microcms-js-sdk",
+    "licenseUrl": "https://github.com/microcmsio/microcms-js-sdk/raw/master/LICENSE",
+    "parents": "portfolio"
+  },
+  "next-pwa": {
+    "licenses": "MIT",
+    "repository": "https://github.com/shadowwalker/next-pwa",
+    "licenseUrl": "https://github.com/shadowwalker/next-pwa/raw/master/LICENSE",
+    "parents": "portfolio"
+  },
+  "next": {
+    "licenses": "MIT",
+    "repository": "https://github.com/vercel/next.js",
+    "licenseUrl": "https://github.com/vercel/next.js/raw/master/license.md",
+    "parents": "portfolio"
+  },
+  "react-dom": {
+    "licenses": "MIT",
+    "repository": "https://github.com/facebook/react",
+    "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
+    "parents": "portfolio"
+  },
+  "react": {
+    "licenses": "MIT",
+    "repository": "https://github.com/facebook/react",
+    "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
+    "parents": "portfolio"
+  },
+  "sharp": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/lovell/sharp",
+    "licenseUrl": "https://github.com/lovell/sharp/raw/master/LICENSE",
+    "parents": "portfolio"
+  },
+  "swr": {
+    "licenses": "MIT",
+    "repository": "https://github.com/vercel/swr",
+    "licenseUrl": "https://github.com/vercel/swr/raw/master/LICENSE",
+    "parents": "portfolio"
+  }
 }

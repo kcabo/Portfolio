@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 body {
   background-color: #f5f7f9;
@@ -13,6 +13,6 @@ body {
 }
 
 .thin-scroll {
-  scrollbar-width: thin; 
+  scrollbar-width: thin;
   scrollbar-color: #eef transparent;
 }

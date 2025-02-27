@@ -13,12 +13,12 @@
 }
 
 .article img {
-  @apply w-auto mx-auto my-8;
+  @apply mx-auto my-8 w-auto;
   max-height: 400px;
 }
 
 .article h2 {
-  @apply relative pt-4 mt-12 mb-3 text-2xl font-bold text-gray-900;
+  @apply relative mt-12 mb-3 pt-4 text-2xl font-bold text-gray-900;
 }
 
 .article h2::before {
@@ -41,7 +41,7 @@
 }
 
 .article ul {
-  @apply pl-7 list-disc;
+  @apply list-disc pl-7;
 }
 
 .article li::marker {
@@ -49,7 +49,7 @@
 }
 
 .article ol {
-  @apply pl-7 list-decimal;
+  @apply list-decimal pl-7;
 }
 
 .article u {
@@ -58,18 +58,18 @@
 }
 
 .article code {
-  @apply px-1 py-1 bg-gray-200 rounded;
+  @apply rounded bg-gray-200 px-1 py-1;
   font-size: 0.8em;
 }
 
 .article pre {
-  @apply max-w-lg p-4 overflow-x-auto leading-tight bg-gray-800 rounded xl:max-w-3xl;
+  @apply max-w-lg overflow-x-auto rounded bg-gray-800 p-4 leading-tight xl:max-w-3xl;
 }
 
 .article pre code {
-  @apply p-0 text-white bg-transparent;
+  @apply bg-transparent p-0 text-white;
 }
 
 .article blockquote {
-  @apply my-2 py-1 pl-4 pr-1 text-gray-500 border-l-2 border-gray-500 bg-gray-50 leading-normal;
+  @apply my-2 border-l-2 border-gray-500 bg-gray-50 py-1 pr-1 pl-4 leading-normal text-gray-500;
 }
