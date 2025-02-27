@@ -40,3 +40,5 @@ robots.txt
 # next-pwa
 sw.js
 workbox-*.js
+
+playground
