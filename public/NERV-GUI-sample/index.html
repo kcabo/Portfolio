@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="email=no,telephone=no,address=no" />
+    <title>NERV-GUI-sample</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="slashes">
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+    </div>
+
+    <header>
+      <!-- <div class="caution">
+      <p>Authorized Personnel Only</p>
+    </div> -->
+      <div class="caption">
+        <div class="rect"></div>
+        <div class="char">
+          <p>管理者用系統制御画面</p>
+          <p>Swimmers Zero System Control</p>
+        </div>
+        <div class="rect"></div>
+      </div>
+    </header>
+
+    <div id="pane">
+      <div class="buttons">
+        <div class="active"><p>開始</p></div>
+        <div><p>完了</p></div>
+      </div>
+      <div class="func">
+        <p>OBJECT</p>
+        <p>add_records</p>
+        <p>>>> from 20191201 to 20191231</p>
+      </div>
+    </div>
+
+    <div id="denied">
+      <p>SAFETY SYSTEM</p>
+      <p>COMMAND REJECTED</p>
+    </div>
+
+    <div id="safe">
+      <div class="left">
+        <div class="scales l">
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="danger">火</p>
+        <!-- <p>安</p> -->
+        <div class="scales r">
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="sub">
+          <div class="small"><p>実装</p></div>
+          <div class="small"><p>実装</p></div>
+          <!-- <div class="small"><p>空</p></div>
+        <div class="small"><p>空</p></div> -->
+        </div>
+      </div>
+    </div>
+
+    <div id="command">
+      <div class="hex" onclick="go('thread/meets')">
+        <img src="./hex.svg" />
+        <p>MEETS</p>
+      </div>
+      <div class="hex" onclick="go('thread/records')">
+        <img src="./hex.svg" />
+        <p>RECORDS</p>
+      </div>
+      <div class="hex" onclick="go('thread/stats')">
+        <img src="./hex.svg" />
+        <p>STATS</p>
+      </div>
+      <div class="hex">
+        <img src="./hex.svg" />
+        <p>GOTO TOP</p>
+        <a href="/"></a>
+      </div>
+    </div>
+
+    <div id="form">
+      <form method="get" action="" name="args">
+        <div class="row">
+          <p>range</p>
+          <input name="range" type="text" />
+        </div>
+        <div class="row">
+          <p>from</p>
+          <input name="from" type="text" />
+        </div>
+        <div class="row">
+          <p>to</p>
+          <input name="to" type="text" />
+        </div>
+        <div class="row">
+          <p>year</p>
+          <input name="year" type="text" />
+        </div>
+      </form>
+    </div>
+
+    <div class="slashes">
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="slash"></div>
+    </div>
+
+    <script>
+      function go(target) {
+        alert('SENT');
+      }
+    </script>
+  </body>
+</html>
