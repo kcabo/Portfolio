@@ -3,7 +3,7 @@ import PageTitle from '@/components/PageTitle';
 export default function Privacy() {
   return (
     <main className='container mx-auto xl:max-w-screen-lg'>
-      <div className='colored-link min-h-dvh bg-white p-10 md:rounded-lg'>
+      <div className='colored-link bg-white p-6 md:min-h-lvh md:rounded-lg'>
         <PageTitle title='プライバシーポリシー' sub='当サイトではGoogleアナリティクスを使用しています。' />
         <div className='space-y-4 leading-loose'>
           <p>

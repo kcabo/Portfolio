@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "expose": "ssh -p 443 -R0:localhost:3000 qr@a.pinggy.io"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

@@ -10,7 +10,7 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
   const url = `/works/${encodeURIComponent(data.id)}`;
 
   return (
-    <div className='overflow-hidden rounded-lg bg-white shadow-lg transition lg:hover:-translate-y-2'>
+    <div className='overflow-hidden rounded-lg bg-white shadow-lg transition lg:hover:-translate-y-1.5 lg:hover:shadow-xl'>
       <Link href={url} className='relative block h-44 w-full border-b border-gray-300'>
         <Image src={data.coverImage.url} alt={data.title} fill className='object-cover' />
       </Link>
@@ -24,12 +24,12 @@ export default function WorkCard({ data }: { data: WorkResponse }) {
           {data.links?.homepage && (
             <Link
               href={data.links.homepage}
-              className='block p-1.5'
+              className='block p-2'
               aria-label='Open homepage'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <ArrowTopRightOnSquareIcon className='size-5 text-blue-600 hover:text-gray-600' />
+              <ArrowTopRightOnSquareIcon className='size-5 rounded-sm text-[#126de3] hover:scale-120 hover:bg-[#126de3] hover:text-white' />
             </Link>
           )}
         </div>

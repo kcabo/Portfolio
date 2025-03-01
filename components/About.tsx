@@ -5,9 +5,9 @@ import { SiGithub, SiFacebook, SiZenn } from '@icons-pack/react-simple-icons';
 export default function About() {
   return (
     <main className='container mx-auto xl:max-w-screen-lg'>
-      <div className='bg-white px-6 py-10 md:rounded-lg lg:px-8'>
+      <div className='bg-white px-6 py-8 md:rounded-lg lg:px-8'>
         <div className='mx-auto max-w-2xl'>
-          <div className='relative mx-auto mb-6 h-80 w-80 overflow-hidden rounded-full'>
+          <div className='relative mx-auto mb-6 h-72 w-72 overflow-hidden rounded-full'>
             <Image src='/me.avif' fill className='object-cover object-[100%_25%]' alt='神崎伶央' />
           </div>
           <h1 className='mb-6 text-center text-2xl font-bold tracking-wider text-gray-600'>Reo Kanzaki / 神崎 伶央</h1>
@@ -15,10 +15,10 @@ export default function About() {
             <p className=''>
               プロダクト設計・UIデザインから、フロントエンド開発・バックエンド開発・
               <br className='hidden md:inline' />
-              クラウドインフラ設計まで、Web分野に幅広く対応可能です。
+              クラウドインフラ設計まで、幅広く対応可能です。
             </p>
             <p className='mt-2'>パフォーマンスとスケーラビリティを重視したアプリケーション開発が得意です。</p>
-            <p className='mt-2'>スタートアップ企業からの受注実績もあります。</p>
+            <p className='mt-2'>スタートアップ企業からの受注実績あり。</p>
             <p className='colored-link mt-2'>
               ご連絡は
               <a href='https://www.linkedin.com/in/reo-kanzaki/' target='_blank' rel='noopener noreferrer'>
@@ -93,9 +93,7 @@ function SocialLinks() {
       </a>
       <a href='https://www.linkedin.com/in/reo-kanzaki/' target='_blank' rel='noopener noreferrer'>
         <div className='flex h-9 w-9 items-center justify-center rounded-sm bg-[#0A66C2]'>
-          <span className='text-2xl leading-none text-white [text-shadow:1px_1px_0_white,-1px_-1px_0_white,1px_-1px_0_white,-1px_1px_0_white]'>
-            in
-          </span>
+          <span className='pl-0.5 text-center text-2xl font-black tracking-wider text-white'>in</span>
         </div>
       </a>
     </div>
