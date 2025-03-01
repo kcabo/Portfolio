@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Roboto:400,700&display=swap&subset=japanese');
+@font-face {
+    font-family: 'Hussar';
+    src: url('my_font.woff2') format('woff2');
+}
+:root {
+  /* --men: #4fc0e8;
+  --women: #ed85c0; */
+  --men: #323da5;
+  --women: #e75f92;
+  --main: #0496FF;
+  --feeble: #D1EBFF;
+  /* --fr: #03A9F4;
+  --ba: #20bf6b;
+  --br: #3867d6;
+  --fly: #fa8231;
+  --im: #8b54d0; */
+
+  /* --fr: linear-gradient(29deg, rgb(4, 150, 255) 45%, rgb(90, 225, 225) 100%);
+  --ba: linear-gradient(29deg, rgb(69, 186, 105) 45%, rgb(217, 234, 78) 100%);
+  --br: linear-gradient(29deg, rgb(90, 101, 255) 45%, rgb(88, 158, 254) 100%);
+  --fly: linear-gradient(29deg, rgb(254, 158, 74) 45%, rgb(254, 213, 69) 100%);
+  --im: linear-gradient(29deg, rgb(159, 57, 228) 45%, rgb(209, 49, 172) 100%); */
+
+  --fr: rgb(4, 150, 255);
+  --ba: rgb(69, 186, 105);
+  --br: rgb(90, 101, 255);
+  --fly: rgb(254, 158, 74);
+  --im: rgb(159, 65, 222);
+
+  --grade: #1E88E5;
+  --team: #FFB300;
+  /* --bg: #f3f7fa; */
+  --bg: #F8F9FC;
+  --shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  --g-light: rgba(51,204,255);
+  --g-heavy: rgba(51,102,255);
+  --gradient: linear-gradient(180deg, var(--g-light) 4.8%, var(--g-heavy) 85.5% );
+}
+/* https://coolors.co/39a9dd-33bf74-c9613e-f9904a-8c5ac9 */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+header {
+  background: white;
+  position: relative;
+}
+header.active {
+  z-index: 3;
+}
+header .wrapper {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 7px;
+  display: flex;
+}
+header a {
+  display: block;
+  margin: auto;
+  text-decoration: none;
+}
+header .logo {
+  display: flex;
+  padding-top: 3.6px;
+}
+header .logo svg {
+  width: 28px;
+  height: 28px;
+}
+header .logo svg path {
+  fill: url("#gradient1")
+}
+header .logo .stop1 {
+  stop-color: var(--g-light);
+}
+header .logo .stop2 {
+  stop-color: var(--g-heavy);
+}
+header .logo p {
+  font-family: 'Hussar';
+  font-size: 1.7rem;
+  line-height: 34px;
+  padding-left: 8px;
+  color: #303030;
+}
+header .logo p b {
+  letter-spacing: -1.8px;
+}
+header .logo span {
+  color: var(--main);
+}
+header .search-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #999;
+}
+header .search-btn, header .placeholder {
+  width: 50px;
+  height: 50px;
+}
+header .search-btn {
+  padding: 11px;
+  cursor: pointer;
+}
+
+header #search {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-top: solid .7px #ccc;
+  position: absolute;
+  padding: 10px 0 12px;
+  top: 50px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 3;
+  display: none;
+}
+header.active  #search {
+  display: block;
+}
+header #search form {
+  border-bottom: solid 1.6px var(--main);
+  width: 250px;
+  font-size: 1.6rem;
+  margin: auto;
+  padding: 0 4px;
+}
+header #search form input {
+  padding: 8px;
+  outline: none;
+  line-height: 1.1;
+}
+
+footer {
+  position: relative;
+  padding: 20px 0;
+  background: #F5F5F5;
+}
+footer .links {
+  padding: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+footer .links a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  border: solid 1px black;
+  width: 150px;
+  font-size: 1.2rem;
+  padding: 8px 10px;
+  margin: 6px 8px;
+  transition: all .3s;
+}
+footer .links a:hover {
+  background: black;
+  color: white;
+}
+footer .links a i {
+  margin-left: 10px;
+}
+footer p {
+  text-align: right;
+  padding: 0 30px;
+  font-size: 2rem;
+  width: 100%;
+  border-bottom: 2px solid #222;
+}
+footer p span {
+  font-weight: bold;
+}
+footer img {
+  height: 35px;
+  position: absolute;
+  background: #F5F5F5;
+  padding: 0 10px;
+  bottom: 9px;
+  left: 10%;
+}
+
+
+.modal {
+  position: fixed;
+  top: 100vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 800px;
+  visibility: hidden;
+  transition: all .5s;
+  background: white;
+  padding: 10px;
+  border-radius: 15px;
+  z-index: 3;
+  opacity: 0;
+}
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+  top: 100px;
+}
+.modal .close {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main);
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 2rem;
+  line-height: 2;
+  cursor: pointer;
+}
+.modal .window {
+  height: 92%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding: 4px;
+}
+.modal .window::-webkit-scrollbar {
+    display:none;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.16);
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s 0s;
+}
+#overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+#detail .result {
+  font-size: 1.2rem;
+}
+#detail .meetInfo {
+  width: 100%;
+  margin: auto;
+}
+#detail .meetInfo p:first-child {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
+#res_start {
+  font-size: 1.2rem;
+  padding-left: 20px;
+}
+#res_end {
+  color: #777;
+  font-size: 1rem;
+}
+#res_area {
+  position: absolute;
+  right: 20px;
+  background: var(--feeble);
+  color: var(--main);
+  display: inline-block;
+  padding: 1px 14px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+}
+#res_meet {
+  font-size: 1.6rem;
+  text-align: center;
+  padding-top: 3px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+#detail .place {
+  text-align: center;
+  color: #777;
+  font-size: 1.1rem;
+}
+#detail .place i {
+  padding-right: 2px;
+}
+#detail .place i:last-of-type {
+  margin-left: 15px;
+}
+
+#detail .event {
+  margin-top: 25px;
+  position: relative;
+  width: 180px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+#detail .event[swim-style = Fr] {
+  background: var(--fr);
+}
+#detail .event[swim-style = Ba] {
+  background: var(--ba);
+}
+#detail .event[swim-style = Br] {
+  background: var(--br);
+}
+#detail .event[swim-style = Fly] {
+  background: var(--fly);
+}
+#detail .event[swim-style = IM] {
+  background: var(--im);
+}
+#detail .event img {
+  width: 40px;
+  position: absolute;
+  top: -6px;
+}
+#res_event {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 30px;
+  padding-left: 40px;
+}
+#detail .swimmer {
+  padding-left: 15px;
+  padding-top: 7px;
+}
+#detail .swimmer i:nth-of-type(1) {
+  color: #666;
+  font-size: 1.3rem;
+  padding-left: 3px;
+}
+#detail .swimmer a {
+  text-decoration: none;
+  color: black;
+}
+#res_name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+#res_grade {
+  margin-left: 20px;
+  background: var(--grade);
+  color: white;
+  display: inline-block;
+  width: 48px;
+  line-height: 1.6;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+#detail .swimmer a.team {
+  margin-left: 5px;
+  background: var(--team);
+  color: white;
+  display: inline-block;
+  padding: 0 5px;
+  line-height: 1.6;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+#detail .swimmer a.team i {
+  color: white;
+  padding-left: 1px;
+  font-size: 0.9rem;
+}
+#detail .result_time {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 30px;
+  margin: 7px 0;
+  border-top: solid #eee .7px;
+  border-bottom: solid  .7px #eee;
+  position: relative;
+}
+#detail .result_time i {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 6.5px;
+  left: calc(50% - 60px);
+  color: #555;
+}
+#detail .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#detail .card {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 90px;
+  margin: 0 4px;
+  padding: 5px;
+  text-align: center;
+}
+#detail .card p:first-child {
+  color: #aaa;
+  font-size: .9rem;
+}
+#detail .card p:last-child {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding-top: 4px;
+  line-height: 1;
+}
+#detail .lapcap {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+#detail .lapcap i {
+  padding-right: 7px;
+}
+#detail .laps {
+  display: flex;
+  justify-content: center;
+}
+#detail .column {
+  font-size: 1.4rem;
+  line-height: 3rem;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+}
+#detail .column p:nth-child(2n) {
+  background: #D1EBFF;
+}
+#detail .column p:nth-child(2n + 1) {
+  background: #f6fbff;
+}
