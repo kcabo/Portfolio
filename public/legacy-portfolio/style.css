@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Roboto:100,400,700&display=swap&subset=japanese');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:300&display=swap');
+:root {
+  --purple: #7371FC;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+  background: #f2f4f7;
+}
+main {
+  max-width: 800px;
+  margin: auto;
+}
+
+header {
+  height: 140px;
+  position: relative;
+  overflow: hidden;
+}
+header #logo {
+  width: 40px;
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 15px);
+  transition: transform 1.5s 0s ease, left 650ms 1.5s ease-in-out;
+}
+
+header.init #logo {
+  left: calc(50% - 70px);
+  transform: rotateX(1080deg);
+}
+
+header p {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #222e;
+  position: absolute;
+  top: 41px;
+  left: calc(50% - 20px);
+  opacity: 0;
+  transition: opacity 2s 1.95s ease;
+}
+
+header.init p {
+  opacity: 1;
+}
+
+#copy {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 2.5;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 30px;
+  font-family: 'Noto Serif JP', serif;
+}
+
+#ongoing {
+  box-shadow:7px 7px 14px #c6c8cb, -7px -7px 14px #ffffff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  display: block;
+  position: relative;
+  max-width: 300px;
+  margin: auto;
+}
+#ongoing .head {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+#ongoing .head::after {
+  width: 40px;
+  height: 1px;
+  display: block;
+  background: #454dd7;
+  content: '';
+  margin: 5px auto;
+}
+#ongoing a::after {
+  content: '';
+  height: 85px;
+  width: 85%;
+  position: absolute;
+  z-index: -2;
+  bottom: 22px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border: solid 1px #444;
+  animation: pulse 1.4s ease-out;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse {
+0%   { transform: scale(0.9, 0.7); opacity: 0.8;}
+100% { transform: scale(1.1, 1.2); opacity: 0.0; }
+}
+#ongoing img {
+  width: 100%;
+  margin: auto;
+  border: solid 1px #aaa;
+}
+
+#ongoing img:hover {
+  filter: brightness(90%);
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: lighter;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+
+#bio p {
+  padding: 5px 30px;
+  font-size: 1.3rem;
+  line-height: 2;
+  max-width: 600px;
+  margin: auto;
+  color: #333;
+}
+
+#skills-wrap {
+  padding-bottom: 25px;
+}
+
+#skill_icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#skill_icons .circle {
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  padding-top: 9px;
+  margin: 5px;
+  box-shadow: inset 5px 5px 10px #d0d2d4,
+            inset -5px -5px 10px #ffffff;
+}
+#skill_icons img {
+  display: block;
+  margin: auto;
+  height: 36px;
+}
+#skill_icons p {
+  text-align: center;
+  color: #888;
+  padding-top: 3px;
+}
+
+#license ul {
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  color: #444;
+}
+#license i {
+  color: tomato;
+  font-size: 1.6rem;
+  padding-top: 3px;
+}
+/* #bio, #ongoing, #skills-wrap{display: none;} */
+
+#works .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#works .card {
+  display: flex;
+  height: 100px;
+  width: 400px;
+  margin: 5px 15px;
+  position: relative;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.1);
+}
+#works .image {
+  height: 100%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+#works .image img {
+  width: 60px;
+}
+#works .detail {
+  padding: 10px 50px 10px 0;
+}
+#works .detail p {
+  color: #aaa;
+}
+#works .detail p:first-child {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  padding: 6px 0;
+}
+#works i {
+  position: absolute;
+  top: 41px;
+  right: 20px;
+  margin: auto;
+  color: #aaa;
+  font-size: 18px;
+}
+
+
+#links .container {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+#links .card {
+  width: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+#links .card .head {
+  background: black;
+  padding: 20px;
+  text-align: center;
+}
+#links .card .head i {
+  color: white;
+  font-size: 3rem;
+}
+#links .card p {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #1B4965;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+footer {
+  max-width: 800px;
+  margin: 50px auto 0;
+  background-image: url(./poolside.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  filter: brightness(70%);
+  padding: 30px;
+}
+footer p {
+  color: #fffa;
+  letter-spacing: 6px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: right;
+}
